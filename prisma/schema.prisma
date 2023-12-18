@@ -1,0 +1,3355 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1000 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1001 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1002 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1003 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1004 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1005 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1006 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1007 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1008 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1009 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1010 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1011 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1012 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1013 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1014 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1015 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1016 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1017 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1018 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_1019 {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model ao_public {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1000 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1001 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1002 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1003 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1004 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1005 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1006 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1007 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1008 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1009 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1010 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1011 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1012 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1013 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1014 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1015 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1016 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1017 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1018 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_1019 {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model cdr_public {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  custype                String?   @db.VarChar(5)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  tags                   String?   @db.VarChar(64)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  talkrecord             String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  callee_id_number       String?   @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_agentoperate {
+  a_id           String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  a_time         DateTime? @db.DateTime(0)
+  a_extension    String?   @db.VarChar(30)
+  a_staffid      String?   @db.VarChar(30)
+  a_operate      String?   @db.VarChar(30)
+  a_string       String?   @db.VarChar(128)
+  a_duration     BigInt?
+  a_queuename    String?   @db.VarChar(30)
+  a_agentname    String?   @db.VarChar(30)
+  a_seatsector   String?   @db.VarChar(50)
+  a_seatsectorid String?   @db.VarChar(50)
+  a_callid       String?   @db.VarChar(50)
+  a_status       String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_cdr {
+  uuid                   String    @id @default(dbgenerated("()")) @db.VarChar(36)
+  accountcode            String?   @db.VarChar(16)
+  sip_callee_id          String?   @db.VarChar(20)
+  caller_id_number       String?   @db.VarChar(20)
+  bridge_uuid            String?   @db.VarChar(36)
+  sip_hangup_disposition String?   @db.VarChar(20)
+  start_stamp            DateTime? @db.Timestamp(0)
+  progress_stamp         DateTime? @db.Timestamp(0)
+  bridge_stamp           DateTime? @db.Timestamp(0)
+  answer_stamp           DateTime? @db.Timestamp(0)
+  end_stamp              DateTime? @db.Timestamp(0)
+  codec                  String?   @db.VarChar(10)
+  remote_media_ip        String?   @db.VarChar(16)
+  hangup_cause           String?   @db.VarChar(36)
+  hangup_cause_q850      Int?      @db.SmallInt
+  conference_name        String?   @db.VarChar(16)
+  conference_uuid        String?   @db.VarChar(36)
+  conference_member_id   String?   @db.VarChar(36)
+  direction              String?   @db.VarChar(8)
+  domain                 String?   @db.VarChar(16)
+  record_seconds         Int?      @db.MediumInt
+  record_filename        String?   @db.Text
+  ivr_id                 String?   @db.VarChar(36)
+  hold_total             Int?      @db.MediumInt
+  duration               Int?      @db.MediumInt
+  billsec                Int?      @db.MediumInt
+  progresssec            Int?      @db.MediumInt
+  answersec              Int?      @db.MediumInt
+  waitsec                Int?      @db.MediumInt
+  ivrsec                 Int?      @db.MediumInt
+  callsec                Int?      @db.MediumInt
+  queuesec               Int?      @db.MediumInt
+  isanswer               String?   @db.VarChar(4)
+  hangupcause            String?   @db.VarChar(4)
+  hangupposition         String?   @db.VarChar(6)
+  ivrnodename            String?   @db.VarChar(20)
+  fcrtimes               Int?      @db.SmallInt
+  transfernumber         String?   @db.Text
+  cusid                  String?   @db.VarChar(36)
+  cusname                String?   @db.VarChar(20)
+  proid                  String?   @db.VarChar(36)
+  proname                String?   @db.VarChar(20)
+  intentioncus           Boolean?  @db.Bit(1)
+  talkaftersec           Int?      @db.MediumInt
+  start_hour             Int?      @db.TinyInt
+  cus_record_filename    String?   @db.Text
+  cus_record_duration    Int?      @db.MediumInt
+  failure_status         String?   @db.VarChar(4)
+  failure_phrase         String?   @db.VarChar(40)
+  context                String?   @db.VarChar(16)
+  destination_number     String?   @db.VarChar(20)
+  network_addr           String?   @db.Text
+  outbound_cid           String?   @db.VarChar(20)
+  last_number            String?   @db.VarChar(20)
+  prev_number            String?   @db.VarChar(20)
+  agent_group            String?   @db.VarChar(20)
+  agent_queue            String?   @db.VarChar(120)
+  last_queue             String?   @db.VarChar(20)
+  agent_name             String?   @db.VarChar(20)
+  agent_staffid          String?   @db.VarChar(20)
+  seatsector             String?   @db.VarChar(20)
+  seatsectorid           String?   @db.VarChar(36)
+  extension              String?   @db.VarChar(20)
+  transfer_agentname     String?   @db.VarChar(20)
+  transfer_agentstaffid  String?   @db.VarChar(20)
+  transfer_agentsector   String?   @db.VarChar(20)
+  transfer_agentsectorid String?   @db.VarChar(36)
+  agentanswer_stamp      DateTime? @db.Timestamp(0)
+  agentanswerend_stamp   DateTime? @db.Timestamp(0)
+  provincename           String?   @db.VarChar(4)
+  cityname               String?   @db.VarChar(20)
+  isp                    String?   @db.VarChar(8)
+  ivrnavigation          String?   @db.Text
+  ivrpressdtmf           String?   @db.Text
+  threeTalkNumber        String?   @db.VarChar(20)
+  holdtimes              Int?      @db.TinyInt
+  evaluateStamp          DateTime? @db.Timestamp(0)
+  transferstamp          DateTime? @db.Timestamp(0)
+  transferringstamp      DateTime? @db.Timestamp(0)
+  transferhangupstamp    DateTime? @db.Timestamp(0)
+  da2_status             String?   @db.VarChar(20)
+  da2_ring               Int?      @db.TinyInt
+  callee_id_number       String?   @db.VarChar(20)
+  c_myd                  String?   @db.Text
+  c_intentions           String?   @db.VarChar(255)
+  tags                   String?   @db.VarChar(64)
+  talkrecord             String?   @db.Text
+  custype                String?   @db.VarChar(5)
+
+  @@index([start_stamp, direction, isanswer], map: "index_c10")
+  @@index([start_stamp, agent_staffid, direction], map: "index_c11")
+  @@index([start_stamp, agent_staffid, direction, isanswer], map: "index_c12")
+  @@index([bridge_stamp, direction, extension, isanswer, waitsec, callsec], map: "index_c8")
+  @@index([start_stamp, direction, extension, isanswer, caller_id_number, callee_id_number, callsec], map: "index_c9")
+  @@index([start_stamp, callee_id_number], map: "timeCalleeIdIndex")
+  @@index([start_stamp, custype, ivrsec], map: "timeCustypeIndex")
+  @@index([start_stamp, hangup_cause_q850], map: "timeHangupcauseIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_missedcalls {
+  m_id           String    @id @default(dbgenerated("()")) @db.VarChar(40)
+  m_talktime     DateTime? @db.DateTime(0)
+  m_caller       String?   @db.VarChar(30)
+  m_called       String?   @db.VarChar(30)
+  m_did          String?   @db.VarChar(30)
+  m_talklength   BigInt?
+  m_ifsuccessful String?   @db.VarChar(30)
+  m_ifreply      String?   @db.VarChar(30)
+  m_replyid      String?   @db.VarChar(50)
+  m_replyman     String?   @db.VarChar(30)
+  m_replytime    DateTime? @db.DateTime(0)
+  m_visitid      String?   @db.VarChar(50)
+  m_visitman     String?   @db.VarChar(30)
+  m_visittime    DateTime? @db.DateTime(0)
+  m_memo         String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_missedrings {
+  r_id           String    @id @default(dbgenerated("()")) @db.VarChar(40)
+  r_talktime     DateTime? @db.DateTime(0)
+  r_caller       String?   @db.VarChar(30)
+  r_called       String?   @db.VarChar(30)
+  r_extension    String?   @db.VarChar(30)
+  r_ringlength   BigInt?
+  r_seatid       String?   @db.VarChar(30)
+  r_queuename    String?   @db.VarChar(30)
+  r_giveupcause  String?   @db.VarChar(50)
+  r_seatsector   String?   @db.VarChar(50)
+  r_seatsectorid String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_monitorlist {
+  m_begintime             DateTime? @db.DateTime(0)
+  m_id                    String    @id @db.VarChar(36)
+  m_bemonitorextension    String?   @db.VarChar(30)
+  m_phone                 String?   @db.VarChar(30)
+  m_monitorseat           String?   @db.VarChar(30)
+  m_monitorseatsector     String?   @db.VarChar(50)
+  m_bemonitorseatsector   String?   @db.VarChar(50)
+  m_monitorseatid         String?   @db.VarChar(30)
+  m_monitorseatsectorid   String?   @db.VarChar(50)
+  m_endtime               DateTime? @db.DateTime(0)
+  m_bemonitorseat         String?   @db.VarChar(30)
+  m_bemonitorseatid       String?   @db.VarChar(30)
+  l_leavefilename         String?   @db.VarChar(255)
+  m_monitorextension      String?   @db.VarChar(30)
+  m_bemonitorseatsectorid String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_cdr_talkinggiveup {
+  p_id           String    @id @default(dbgenerated("()")) @db.VarChar(40)
+  p_talktime     DateTime? @db.DateTime(0)
+  p_caller       String?   @db.VarChar(30)
+  p_called       String?   @db.VarChar(30)
+  p_extension    String?   @db.VarChar(30)
+  p_talklength   BigInt?
+  p_seatid       String?   @db.VarChar(30)
+  p_queuename    String?   @db.VarChar(30)
+  p_seatsector   String?   @db.VarChar(50)
+  p_seatsectorid String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_agentgroup {
+  C_UPDATETIME DateTime? @db.DateTime(0)
+  C_ID         String    @id @db.VarChar(36)
+  C_DESC       String?   @db.VarChar(30)
+  C_STATUS     String?   @db.VarChar(30)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_agentinfo {
+  SEAT      String? @db.VarChar(30)
+  IP        String? @db.VarChar(30)
+  U_ID      String  @id @db.VarChar(36)
+  EXTENSION String? @db.VarChar(30)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_attachment {
+  D_CREATETIME   DateTime? @db.DateTime(0)
+  D_URL          String?   @db.VarChar(255)
+  D_SIZE         BigInt?
+  D_PARENTID     String?   @db.VarChar(255)
+  D_DATAID       String?   @db.VarChar(255)
+  D_CREATOR      String?   @db.VarChar(255)
+  D_NAME         String?   @db.VarChar(255)
+  D_ORIGINALNAME String?   @db.VarChar(255)
+  D_ID           String    @id @db.VarChar(36)
+  D_MODULE       String?   @db.VarChar(255)
+
+  @@index([D_PARENTID], map: "parentId_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_attachmentdata {
+  D_DATA String? @db.LongText
+  D_ID   String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_black {
+  C_TYPE      String?   @db.VarChar(20)
+  C_START     String?   @db.VarChar(10)
+  C_CREATTIME DateTime? @db.DateTime(0)
+  C_CREATOR   String?   @db.VarChar(50)
+  C_ID        String    @id @db.VarChar(36)
+  C_CONTENT   String?   @db.Text
+  C_PHONE     String?   @db.VarChar(30)
+  C_CREATORID String?   @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_chatgroup {
+  C_MEMBERS    String?   @db.Text
+  C_OWNER      String?   @db.VarChar(40)
+  C_ID         String    @id @db.VarChar(36)
+  C_OWNERID    String?   @db.VarChar(40)
+  C_DESC       String?   @db.VarChar(255)
+  C_MEMBERNUM  BigInt?
+  C_NAME       String?   @db.VarChar(40)
+  C_CREATETIME DateTime? @db.DateTime(0)
+  C_AVATAR     String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_column_define {
+  C_DEFAULTVALUE  String?  @db.VarChar(512)
+  C_PROPERTYNAME  String?  @db.VarChar(255)
+  C_FEATURE       String?  @db.VarChar(32)
+  C_AUTOINCREMENT Boolean?
+  C_NULLABLE      Boolean?
+  C_ID            String   @id @db.VarChar(36)
+  C_COLUMNNAME    String?  @db.VarChar(255)
+  C_COMMENT       String?  @db.VarChar(255)
+  C_DIRECTORYID   String?  @db.VarChar(36)
+  C_DATASIZE      Int?
+  C_COLUMNTYPE    String?  @db.VarChar(255)
+  C_DIGITS        Int?
+  C_TABLEID       String?  @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_customerlogin {
+  C_PASS String? @db.VarChar(50)
+  C_ID   String  @id @db.VarChar(36)
+  C_NAME String? @db.VarChar(50)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_data_content {
+  D_KEY         String? @db.VarChar(255)
+  D_PARENTID    String? @db.VarChar(36)
+  D_VALUE       String? @db.VarChar(255)
+  D_SEQUENCE    BigInt?
+  D_DIRECTORYID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_data_directory {
+  D_KEYTYPE     String? @db.VarChar(64)
+  D_TYPE        String? @db.VarChar(64)
+  D_STORETYPE   String? @db.VarChar(64)
+  D_ENTITYNAME  String? @db.VarChar(64)
+  D_PARENTID    String? @db.VarChar(36)
+  D_ORDER       BigInt?
+  D_ASSOCIATEID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_NAME        String? @db.VarChar(64)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_data_fields {
+  D_TYPE        String? @db.VarChar(64)
+  D_LENGTH      BigInt?
+  D_COLUMN      String? @db.VarChar(64)
+  D_SEQUENCE    BigInt?
+  D_DIRECTORYID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_NAME        String? @db.VarChar(64)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_export {
+  C_CREATOR    String?   @db.VarChar(255)
+  C_FILESIZE   String?   @db.VarChar(255)
+  C_ID         String    @id @db.VarChar(36)
+  C_URL        String?   @db.VarChar(255)
+  C_PARAMS     String?   @db.Text
+  C_NAME       String?   @db.VarChar(255)
+  C_CREATETIME DateTime? @db.DateTime(0)
+  C_CREATORID  String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_homeview {
+  C_MYORDER  String? @db.VarChar(20)
+  C_ID       String  @id @db.VarChar(36)
+  C_HEIGHT   String? @db.LongText
+  C_SORTNUM  String? @db.LongText
+  C_CMPKEYS  String? @db.LongText
+  C_USERID   String? @db.VarChar(255)
+  C_MYNOTICE String? @db.VarChar(20)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_message {
+  O_TYPE    String? @db.VarChar(10)
+  O_ID      String  @id @db.VarChar(36)
+  O_TO      String? @db.VarChar(200)
+  O_CONTENT String? @db.Text
+  O_TIME    BigInt?
+  O_FROM    String? @db.VarChar(200)
+  O_WINID   String? @db.VarChar(100)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_dutyinfo {
+  D_DELETETAG  BigInt? @default(0)
+  D_MEMO       String? @db.VarChar(255)
+  D_CONTROLSTR String? @db.VarChar(4)
+  D_SECTORID   String? @default(dbgenerated("()")) @db.VarChar(36)
+  D_CONTROLS   String? @db.Text
+  D_NAME       String? @db.VarChar(32)
+  D_ID         String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_role {
+  R_ID          String    @id @db.VarChar(36)
+  R_NAME        String?   @db.VarChar(255)
+  R_DESC        String?   @db.VarChar(255)
+  R_CREATORID   String?   @db.VarChar(36)
+  R_TYPE        String?   @db.VarChar(255)
+  R_ORDERID     BigInt?
+  R_OPERATTIME  DateTime? @db.DateTime(0)
+  R_CREATORNAME String?   @db.VarChar(255)
+  R_MODULENAME  String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_rolepermission {
+  R_ID             String  @id @db.VarChar(36)
+  R_PERMISSIONNAME String? @db.VarChar(255)
+  R_KEY            String? @db.VarChar(255)
+  R_MODULENAME     String? @db.VarChar(255)
+  R_ROLENAME       String? @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_sectorinfo {
+  S_DESC       String?   @db.VarChar(255)
+  S_DELETETAG  BigInt?
+  S_CREATETIME DateTime? @db.DateTime(0)
+  S_PARENTID   String?   @db.VarChar(36)
+  S_ID         String    @id @db.VarChar(36)
+  S_TYPE       String?   @db.VarChar(255)
+  S_SECTORNAME String?   @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_userrole {
+  U_ROLENAME String? @db.VarChar(255)
+  U_ID       String  @id @db.VarChar(36)
+  U_USERID   String? @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_organization_users {
+  U_STAFFID             String? @db.VarChar(32)
+  U_SOFTPHONEACCOUNT    String? @db.VarChar(32)
+  U_HOMEPHONE           String? @db.VarChar(255)
+  U_SECTORNAME          String? @db.VarChar(64)
+  U_SOFTPHONEAFTER      String? @db.VarChar(2)
+  U_PHONETYPE           BigInt?
+  U_AGENTLEVEL          String? @db.VarChar(32)
+  U_ROLENAME            String? @db.VarChar(32)
+  U_ADDRESS             String? @db.VarChar(255)
+  U_AGENTGROUPID        String? @default(dbgenerated("()")) @db.VarChar(36)
+  U_PHOTOID             String? @db.VarChar(36)
+  U_SECTORID            String? @default(dbgenerated("()")) @db.VarChar(36)
+  U_MOBILEPHONE         String? @db.VarChar(255)
+  U_DUTYNAME            String? @db.VarChar(32)
+  U_DELETETAG           BigInt?
+  U_EMAIL               String? @db.VarChar(255)
+  U_ID                  String  @id @db.VarChar(36)
+  U_EXTENSION           String? @db.VarChar(32)
+  U_AGENTGROUP          String? @db.VarChar(32)
+  U_IP                  String? @db.VarChar(32)
+  U_OFFLINETIME         BigInt?
+  U_ANNREADTIME         BigInt?
+  U_SEX                 String? @db.VarChar(16)
+  U_SOFTPHONESERVERADDR String? @db.VarChar(32)
+  U_DUTYID              String? @db.VarChar(36)
+  U_MEMO                String? @db.VarChar(4096)
+  U_SOFTPHONEPASSWORD   String? @db.VarChar(32)
+  U_OFFICEPHONE         String? @db.VarChar(255)
+  U_PASSWORD            String? @db.VarChar(64)
+  U_ACCOUNT             String? @db.VarChar(32)
+  U_FAX                 String? @db.VarChar(255)
+  U_REALNAME            String? @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_remind {
+  C_REMINDDATE DateTime? @db.DateTime(0)
+  C_ENTITYID   String?   @db.VarChar(255)
+  C_ID         String    @id @db.VarChar(36)
+  C_REMINDTYPE Int?
+  C_OWNERID    String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_system_log {
+  L_CONTENT              String?   @db.VarChar(255)
+  L_OPERATORID           String?   @db.VarChar(36)
+  L_OPERATORBUSINESSTYPE String?   @db.VarChar(100)
+  L_OPERATORTYPE         String?   @db.VarChar(100)
+  L_OPERATORNUMBER       String?   @db.VarChar(100)
+  L_ID                   String    @id @db.VarChar(36)
+  L_OPERATORNAME         String?   @db.VarChar(36)
+  L_OPERATORBUSINESSID   String?   @db.VarChar(255)
+  L_OPERATTIME           DateTime? @db.DateTime(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_system_module {
+  M_KEY         String?  @db.VarChar(36)
+  M_INSTALLED   Boolean?
+  M_STOPPABLE   Boolean?
+  M_ID          String   @id @db.VarChar(36)
+  M_STATUS      String?  @db.VarChar(255)
+  M_AUTOSTART   Boolean?
+  M_AUTOINSTALL Boolean?
+  M_PAUSABLE    Boolean?
+  M_DEPENDENCY  String?  @db.VarChar(255)
+  M_NAME        String?  @db.VarChar(36)
+  M_DESC        String?  @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_crm_table_define {
+  T_ENTITYNAME String? @db.VarChar(255)
+  T_NAME       String? @db.VarChar(255)
+  T_COMMENT    String  @default(dbgenerated("(无)")) @db.VarChar(255)
+  T_ID         String  @id @db.VarChar(36)
+  T_PRIMARYKEY String  @default(dbgenerated("(id)")) @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_agentinfo {
+  SEAT      String? @db.VarChar(30)
+  IP        String? @db.VarChar(30)
+  U_ID      String  @id @db.VarChar(36)
+  EXTENSION String? @db.VarChar(30)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model spzc_fs_areacode {
+  c_areacode String? @db.VarChar(4)
+  c_province String? @db.VarChar(50)
+  c_city     String? @db.VarChar(50)
+
+  @@index([c_areacode], map: "areacode")
+  @@ignore
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_asr_settings {
+  A_VOLUME      BigInt?
+  A_MAXSPEAKMS  BigInt?
+  A_MINSPEAKMS  BigInt?
+  A_MAXPAUSEMS  BigInt?
+  A_THRESHOLD   BigInt?
+  A_NAME        String? @db.VarChar(36)
+  A_DESC        String? @db.VarChar(40)
+  A_MINPAUSEMS  BigInt?
+  A_ID          String  @id @db.VarChar(36)
+  A_FILTERLEVEL BigInt?
+  A_CFGPATH     String? @db.VarChar(256)
+  A_PAUSEPLAYMS BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_attachment {
+  C_ORIGINALNAME String?   @db.VarChar(255)
+  C_CREATOR      String?   @db.VarChar(255)
+  C_ID           String    @id @db.VarChar(36)
+  C_PARENTID     String?   @db.VarChar(255)
+  C_URL          String?   @db.VarChar(255)
+  C_NAME         String?   @db.VarChar(255)
+  C_CREATETIME   DateTime? @db.DateTime(0)
+  C_SIZE         String?   @db.LongText
+  C_MODULE       String?   @db.VarChar(255)
+  C_DATAID       String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_attachmentdata {
+  C_ID   String  @id @db.VarChar(36)
+  C_DATA String? @db.LongText
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_attribution {
+  C_MOBILE     Decimal @id @db.Decimal(7, 0)
+  C_PROVINCE   String? @db.VarChar(50)
+  C_CITY       String? @db.VarChar(50)
+  C_AREACODE   String? @db.VarChar(4)
+  C_POSTCODE   String? @db.VarChar(6)
+  C_ISP        String? @db.VarChar(5)
+  C_VNO        String? @db.VarChar(10)
+  C_UPDATE     String? @default(dbgenerated("(0)")) @db.Char(1)
+  C_UPDATETIME String? @db.Char(19)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_autodial_result {
+  A_CREATOR     String?   @db.VarChar(36)
+  A_CREATETIME  DateTime? @db.DateTime(0)
+  A_TALKRESULT  String?   @db.VarChar(40)
+  A_DIALRESULT  String?   @db.VarChar(40)
+  A_CID         String?   @db.VarChar(40)
+  A_NUMBER      String?   @db.VarChar(40)
+  A_PID         String?   @db.VarChar(40)
+  A_TID         BigInt
+  A_UUID        String?   @db.VarChar(40)
+  A_CNAME       String?   @db.VarChar(40)
+  A_DIALTIME    DateTime? @db.DateTime(0)
+  A_ID          BigInt    @id @default(autoincrement())
+  A_HANGUPCAUSE String?   @db.VarChar(40)
+  A_DOMAIN      String?   @db.VarChar(36)
+
+  @@index([A_PID], map: "projectIdIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_autodial_task {
+  A_CREATOR     String?   @db.VarChar(36)
+  A_CREATETIME  DateTime? @db.DateTime(0)
+  A_CID         String?   @db.VarChar(40)
+  A_NUMBER      String?   @db.VarChar(40)
+  A_PID         String?   @db.VarChar(40)
+  A_CNAME       String?   @db.VarChar(40)
+  A_ID          BigInt    @id @default(autoincrement())
+  A_STARTTIME   DateTime  @default(dbgenerated("(2000-01-01 00:00:00)")) @db.DateTime(0)
+  A_REDIALTIMES BigInt?
+  A_DOMAIN      String?   @db.VarChar(36)
+  A_ENDTIME     DateTime  @default(dbgenerated("(2099-01-01 00:00:00)")) @db.DateTime(0)
+
+  @@unique([A_PID, A_NUMBER], map: "numberUniqueIndex")
+  @@index([A_PID, A_STARTTIME, A_ENDTIME], map: "timeIdIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_cdr_report {
+  C_TYPE      String? @db.VarChar(8)
+  C_MEMO      String? @db.Text
+  C_CONDITION String? @db.Text
+  C_USECOND   BigInt?
+  C_ENABLE    String? @db.VarChar(8)
+  C_ID        String  @id @db.VarChar(36)
+  C_URL       String? @db.VarChar(1024)
+  C_PARAMS    String? @db.Text
+  C_NAME      String? @db.VarChar(36)
+  C_DOMAIN    String  @default(dbgenerated("(none)")) @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_cdr_reportparams {
+  C_RID        String? @db.VarChar(40)
+  C_EXPRESSION String? @db.Text
+  C_ID         String  @id @db.VarChar(36)
+  C_PARAM      String? @db.VarChar(36)
+  C_DESC       String? @db.VarChar(36)
+  C_DOMAIN     String? @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_column_define {
+  C_DEFAULTVALUE  String?  @db.VarChar(512)
+  C_PROPERTYNAME  String?  @db.VarChar(255)
+  C_FEATURE       String?  @db.VarChar(32)
+  C_AUTOINCREMENT Boolean?
+  C_NULLABLE      Boolean?
+  C_ID            String   @id @db.VarChar(36)
+  C_COLUMNNAME    String?  @db.VarChar(255)
+  C_COMMENT       String?  @db.VarChar(255)
+  C_DIRECTORYID   String?  @db.VarChar(36)
+  C_DATASIZE      Int?
+  C_COLUMNTYPE    String?  @db.VarChar(255)
+  C_DIGITS        Int?
+  C_TABLEID       String?  @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_cti_domains {
+  D_EXPIRETIME      DateTime? @db.DateTime(0)
+  D_CREATETIME      DateTime? @db.DateTime(0)
+  D_WAVPATH         String?   @db.Text
+  D_TYPE            String?   @db.VarChar(24)
+  D_MAXAGENT        BigInt?
+  P_ASRSETTINGSNAME String?   @db.VarChar(40)
+  D_TAGS            String?   @db.Text
+  D_MAXEXTEN        BigInt?
+  D_IVR             BigInt?
+  D_UUID            String?   @db.VarChar(40)
+  D_PBX             String?   @db.VarChar(40)
+  D_SECURITY        String?   @db.VarChar(36)
+  D_DESC            String?   @db.VarChar(40)
+  D_NAME            String?   @db.VarChar(36)
+  D_ID              String    @id @db.VarChar(36)
+
+  @@index([D_EXPIRETIME, D_NAME], map: "domainExpireIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_cti_queue {
+  Q_CALLERNAME       String? @db.VarChar(1024)
+  Q_BROADCAST        String? @db.VarChar(1024)
+  Q_CALLERID         String? @db.VarChar(1024)
+  Q_BROADCASTTIME    BigInt?
+  Q_STABLEEXTENLIST  String? @db.VarChar(1024)
+  Q_QUEUETYPE        BigInt?
+  Q_DESC             String? @db.VarChar(256)
+  Q_WAITMUSIC        String? @db.VarChar(1024)
+  Q_NAME             String? @db.VarChar(36)
+  Q_AGENTIVR         String? @db.VarChar(40)
+  Q_OVERFLOWLEVEL    BigInt?
+  Q_BOARDCASTSTAFFID BigInt?
+  Q_SKILLEFFECT      BigInt?
+  Q_BROADCASTTYPE    BigInt?
+  Q_RINGTIMEOUT      BigInt?
+  Q_AGENTTRACK       BigInt?
+  Q_LEVELEFFECT      BigInt?
+  Q_REGISTERMODE     String? @db.VarChar(40)
+  Q_OVERFLOW         BigInt?
+  Q_ID               String  @id @db.VarChar(36)
+  Q_ERRACTION        BigInt?
+  Q_QUEUETIMEOUT     BigInt?
+  Q_DOMAIN           String  @default(dbgenerated("(none)")) @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_data_content {
+  D_KEY         String? @db.VarChar(255)
+  D_PARENTID    String? @db.VarChar(36)
+  D_VALUE       String? @db.VarChar(255)
+  D_SEQUENCE    BigInt?
+  D_DIRECTORYID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_data_directory {
+  D_KEYTYPE     String? @db.VarChar(64)
+  D_TYPE        String? @db.VarChar(64)
+  D_STORETYPE   String? @db.VarChar(64)
+  D_ENTITYNAME  String? @db.VarChar(64)
+  D_PARENTID    String? @db.VarChar(36)
+  D_ORDER       BigInt?
+  D_ASSOCIATEID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_NAME        String? @db.VarChar(64)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_data_fields {
+  D_TYPE        String? @db.VarChar(64)
+  D_LENGTH      BigInt?
+  D_COLUMN      String? @db.VarChar(64)
+  D_SEQUENCE    BigInt?
+  D_DIRECTORYID String? @db.VarChar(36)
+  D_DESC        String? @db.VarChar(255)
+  D_NAME        String? @db.VarChar(64)
+  D_ID          String  @id @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_ivr_catalog {
+  I_CATALOGID String? @db.VarChar(36)
+  I_DESC      String? @db.VarChar(255)
+  I_NAME      String? @db.VarChar(36)
+  I_DELETETAG BigInt?
+  I_REALM     String? @db.VarChar(36)
+  I_ID        String  @id @db.VarChar(36)
+  I_ORDER     BigInt  @default(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_ivr_data {
+  I_DATA   String? @db.LongText
+  I_TYPE   String? @db.VarChar(36)
+  I_REALM  String? @db.VarChar(36)
+  I_VIEWID String? @db.VarChar(40)
+  I_ID     String  @id @db.VarChar(36)
+
+  @@index([I_VIEWID], map: "viewIdIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_ivr_globalvars {
+  G_ID    String  @id @db.VarChar(36)
+  G_KEY   String? @db.VarChar(36)
+  G_VALUE String? @db.VarChar(256)
+  G_TYPE  String? @db.VarChar(36)
+  G_REALM String? @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_ivr_history {
+  I_DATA    String?   @db.LongText
+  I_DESC    String?   @db.VarChar(256)
+  I_CURRENT String?   @db.VarChar(36)
+  I_REALM   String?   @db.VarChar(36)
+  I_VIEWID  String?   @db.VarChar(40)
+  I_TIME    DateTime? @db.DateTime(0)
+  I_ID      String    @id @db.VarChar(36)
+
+  @@index([I_VIEWID], map: "viewIdIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_ivr_view {
+  I_CATALOGID          String?   @db.VarChar(36)
+  I_DESC               String?   @db.VarChar(255)
+  I_NAME               String?   @db.VarChar(36)
+  I_DELETETAG          BigInt?
+  I_EDITOR             String?   @db.VarChar(255)
+  I_MEMO               String?   @db.VarChar(2048)
+  I_TYPE               String?   @db.VarChar(36)
+  I_EDITTIME           DateTime? @db.DateTime(0)
+  I_REALM              String?   @db.VarChar(36)
+  I_ID                 String    @id @db.VarChar(36)
+  I_RECORDINGCATALOGID String?   @db.VarChar(36)
+
+  @@index([I_REALM, I_CATALOGID], map: "realmCatalogIdIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_log {
+  L_CONTENT      String?   @db.VarChar(255)
+  L_OPERATORID   String?   @db.VarChar(36)
+  L_ID           String    @id @db.VarChar(36)
+  L_OPERATORNAME String?   @db.VarChar(36)
+  L_OPERATTIME   DateTime? @db.DateTime(0)
+  L_TYPE         String?   @db.VarChar(10)
+  L_LEVEL        String?   @db.VarChar(24)
+  L_MODULE       String?   @db.VarChar(24)
+  L_EVENT        String?   @db.VarChar(32)
+  L_READ         BigInt?   @default(0)
+  L_IP           String?   @db.VarChar(40)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_module {
+  M_KEY         String?  @db.VarChar(36)
+  M_INSTALLED   Boolean?
+  M_STOPPABLE   Boolean?
+  M_ID          String   @id @db.VarChar(36)
+  M_STATUS      String?  @db.VarChar(255)
+  M_AUTOSTART   Boolean?
+  M_AUTOINSTALL Boolean?
+  M_PAUSABLE    Boolean?
+  M_DEPENDENCY  String?  @db.VarChar(255)
+  M_NAME        String?  @db.VarChar(36)
+  M_DESC        String?  @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_project {
+  P_GATEWAYID        String?   @db.VarChar(40)
+  P_TALKEDNUMBER     BigInt?
+  P_CREATOR          String?   @db.VarChar(36)
+  P_ACTIVENUMBER     BigInt?
+  P_CALLERID         String?   @db.VarChar(40)
+  P_GATEWAY          String?   @db.VarChar(40)
+  P_ID               String    @id @db.VarChar(36)
+  P_DIALRATE         BigInt?
+  P_DIALNUM          BigInt?
+  P_PBX              String?   @db.VarChar(40)
+  P_CONNECTINGNUMBER BigInt?
+  P_WAITINGNUMBER    BigInt?
+  P_CONNECTEDNUMBER  BigInt?
+  P_IVRID            String?   @db.VarChar(40)
+  P_FAILEDNUMBER     BigInt?
+  P_MAXDIAL          BigInt?
+  P_IVRNAME          String?   @db.VarChar(40)
+  P_QUEUE            String?   @db.VarChar(40)
+  P_CREATETIME       DateTime? @db.DateTime(0)
+  P_STATUS           String?   @db.VarChar(40)
+  P_CALLEDNUMBER     BigInt?
+  P_TALKINGNUMBER    BigInt?
+  P_NAME             String?   @db.VarChar(36)
+  P_DESC             String?   @db.VarChar(256)
+  P_REDIALTIMES      BigInt?
+  P_ASRSETTINGSNAME  String?   @db.VarChar(40)
+  P_PERCENT          String?   @db.VarChar(6)
+  P_TASKCOUNT        BigInt?
+  P_DAYSOFWEEK       String?   @db.VarChar(30)
+  P_ENDTIME3         String?   @db.VarChar(10)
+  P_ENDTIME2         String?   @db.VarChar(10)
+  P_ENDTIME1         String?   @db.VarChar(10)
+  P_DOMAIN           String    @default(dbgenerated("(none)")) @db.VarChar(36)
+  P_REDIALINTERVAL   BigInt?
+  P_STARTTIME2       String?   @db.VarChar(10)
+  P_STARTTIME3       String?   @db.VarChar(10)
+  P_STARTTIME1       String?   @db.VarChar(10)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_recording_catalog {
+  R_ID        String  @id @db.VarChar(36)
+  R_NAME      String? @db.VarChar(36)
+  R_DESC      String? @db.VarChar(255)
+  R_CATALOGID String? @db.VarChar(36)
+  R_DOMAIN    String? @db.VarChar(36)
+  R_TYPE      String  @default(dbgenerated("(normal)")) @db.VarChar(10)
+  R_ORDER     BigInt  @default(0)
+  R_DELETETAG BigInt?
+
+  @@unique([R_DOMAIN, R_NAME], map: "domainNameUniqueIndex")
+  @@index([R_DOMAIN, R_TYPE], map: "domainTypeIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_recordings {
+  R_ID          String  @id @db.VarChar(36)
+  R_NAME        String? @db.VarChar(36)
+  R_DESC        String? @db.VarChar(1024)
+  R_ANSWERTYPE2 String? @db.VarChar(36)
+  R_ANSWERTYPE1 String? @db.VarChar(36)
+  R_ANSWERTYPE3 String? @db.VarChar(36)
+  R_FILEPATH    String? @db.VarChar(255)
+  R_ANSWERTAG3  String? @db.VarChar(36)
+  R_ANSWERTAG2  String? @db.VarChar(36)
+  R_ANSWERTAG1  String? @db.VarChar(36)
+  R_DURATION    BigInt  @default(0)
+  R_LENGTH      BigInt  @default(0)
+  R_CATALOGID   String? @db.VarChar(36)
+  R_DOMAIN      String? @db.VarChar(36)
+  R_KEYWORDS    String? @db.LongText
+  R_SOURCENAME  String? @db.VarChar(255)
+  R_CUSTYPE     String? @db.VarChar(36)
+  R_ANSWERKEY1  String? @db.VarChar(36)
+  R_ANSWERKEY3  String? @db.VarChar(36)
+  R_ANSWERKEY2  String? @db.VarChar(36)
+  R_TAG         String? @db.VarChar(8)
+  R_ANSWERPATH2 String? @db.VarChar(36)
+  R_ANSWERPATH3 String? @db.VarChar(36)
+  R_ANSWERPATH1 String? @db.VarChar(36)
+
+  @@index([R_DOMAIN, R_CATALOGID], map: "domainIdIndex")
+  @@index([R_FILEPATH], map: "filepathIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_role {
+  R_ID          String    @id @db.VarChar(36)
+  R_NAME        String?   @db.VarChar(255)
+  R_DESC        String?   @db.VarChar(255)
+  R_CREATORID   String?   @db.VarChar(36)
+  R_TYPE        String?   @db.VarChar(255)
+  R_ORDERID     BigInt?
+  R_OPERATTIME  DateTime? @db.DateTime(0)
+  R_CREATORNAME String?   @db.VarChar(255)
+  R_MODULENAME  String?   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_rolepermission {
+  R_ID             String  @id @db.VarChar(36)
+  R_PERMISSIONNAME String? @db.VarChar(255)
+  R_KEY            String? @db.VarChar(255)
+  R_MODULENAME     String? @db.VarChar(255)
+  R_ROLENAME       String? @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_setting {
+  S_DESC     String? @db.VarChar(8)
+  S_EDITABLE String? @db.VarChar(8)
+  S_ID       String  @id @db.VarChar(36)
+  S_DEFAULT  String? @db.VarChar(8)
+  S_KEY      String? @db.VarChar(8)
+  S_NAME     String? @db.VarChar(8)
+  S_VALUE    String? @db.VarChar(8)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_synonym {
+  S_DESC    String? @db.VarChar(36)
+  S_CONTENT String? @db.LongText
+  S_TAG     String? @db.VarChar(8)
+  S_ID      String  @id @db.VarChar(36)
+  S_DOMAIN  String? @db.VarChar(36)
+  S_NAME    String? @db.VarChar(36)
+
+  @@index([S_DOMAIN], map: "domainIndex")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_synonym_catalog {
+  S_DESC String? @db.VarChar(36)
+  S_ID   String  @id @db.VarChar(36)
+  S_NAME String? @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_table_define {
+  T_ENTITYNAME String? @db.VarChar(255)
+  T_NAME       String? @db.VarChar(255)
+  T_COMMENT    String  @default(dbgenerated("(无)")) @db.VarChar(255)
+  T_ID         String  @id @db.VarChar(36)
+  T_PRIMARYKEY String  @default(dbgenerated("(id)")) @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_userrole {
+  U_ROLENAME String? @db.VarChar(255)
+  U_ID       String  @id @db.VarChar(36)
+  U_USERID   String? @db.VarChar(36)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_fs_users {
+  U_ROLENAME           String?   @db.VarChar(32)
+  U_DELETETAG          BigInt?
+  U_ID                 String    @id @db.VarChar(36)
+  U_MEMO               String?   @db.VarChar(4096)
+  U_PASSWORD           String?   @db.VarChar(64)
+  U_ACCOUNT            String?   @db.VarChar(32)
+  U_REALNAME           String?   @db.VarChar(32)
+  U_DOMAIN             String    @default(dbgenerated("(all)")) @db.VarChar(32)
+  U_STARTTIME3         String?   @db.VarChar(10)
+  U_STARTTIME1         String?   @db.VarChar(10)
+  U_STARTTIME2         String?   @db.VarChar(10)
+  U_LOGINIP            String?   @db.VarChar(30)
+  U_LASTLOGINTIME      DateTime? @db.DateTime(0)
+  U_IDENTITYCARD       String?   @db.VarChar(32)
+  U_MOBILEPHONE        String?   @db.VarChar(32)
+  U_EXPIRETIME         DateTime? @db.DateTime(0)
+  U_STATUS             String?   @db.VarChar(32)
+  U_EXPIREDTYPE        String?   @db.VarChar(8)
+  U_CREATETIME         DateTime? @db.DateTime(0)
+  U_DORMANTTIME        DateTime? @db.DateTime(0)
+  U_ENDTIME1           String?   @db.VarChar(10)
+  U_ENDTIME2           String?   @db.VarChar(10)
+  U_ENDTIME3           String?   @db.VarChar(10)
+  U_ACTIVESTATUS       String?   @db.VarChar(8)
+  U_DAYSOFWEEK         String?   @db.VarChar(30)
+  U_PASSWORDCHANGETIME DateTime? @db.DateTime(0)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_department_work {
+  C_YEAR               BigInt?
+  C_ICONVERSATIONCOUNT BigInt?
+  C_OCONVERSATIONCOUNT BigInt?
+  C_DAY                BigInt?
+  C_STARTSTAMP         DateTime? @db.DateTime(0)
+  C_ID                 String    @id @db.VarChar(36)
+  C_OCONVERSATIONTIME  BigInt?
+  C_MONTH              BigInt?
+  C_OCALLCOUNT         BigInt?
+  C_SEATSECTORID       String?   @db.VarChar(50)
+  C_SEATSECTOR         String?   @db.VarChar(50)
+  C_HOUR               BigInt?
+  C_ICONVERSATIONTIME  BigInt?
+  C_ICALLCOUNT         BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_interrupt {
+  C_YEAR        BigInt?
+  nRingNoAnswer BigInt?
+  C_DAY         BigInt?
+  nLineGiveup   BigInt?
+  sipCalleeID   String?   @db.VarChar(255)
+  C_STARTSTAMP  DateTime? @db.DateTime(0)
+  C_ID          String    @id @db.VarChar(36)
+  C_MONTH       BigInt?
+  nAnswer       BigInt?
+  C_HOUR        BigInt?
+  nLeave        BigInt?
+  nTotal        BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_operation {
+  C_YEAR               BigInt?
+  C_INTALKCOUNT20      BigInt?
+  C_ICONVERSATIONCOUNT BigInt?
+  C_ICALLLOSSCOUNT     BigInt?
+  C_THREESECONDHANGUP  BigInt?
+  C_DAY                BigInt?
+  C_STARTSTAMP         DateTime? @db.DateTime(0)
+  C_ID                 String    @id @db.VarChar(36)
+  C_INSUMRINGLENGTH    BigInt?
+  C_MONTH              BigInt?
+  C_HOUR               BigInt?
+  C_ICONVERSATIONTIME  BigInt?
+  C_ICALLCOUNT         BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_satisfaction {
+  C_YEAR         BigInt?
+  C_AGENTNAME    String?   @db.VarChar(50)
+  C_DAY          BigInt?
+  nInAnswer      BigInt?
+  C_JOBMUMBER    String?   @db.VarChar(50)
+  C_STARTSTAMP   DateTime? @db.DateTime(0)
+  C_ID           String    @id @db.VarChar(36)
+  C_MONTH        BigInt?
+  C_SEATSECTORID String?   @db.VarChar(50)
+  nMyd1          BigInt?
+  nMyd2          BigInt?
+  nMyd3          BigInt?
+  C_SEATSECTOR   String?   @db.VarChar(50)
+  C_HOUR         BigInt?
+  nMyd           BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_seating_work {
+  C_YEAR               BigInt?
+  C_AGENTNAME          String?   @db.VarChar(50)
+  C_ICONVERSATIONCOUNT BigInt?
+  C_ICALLLOSSCOUNT     BigInt?
+  C_OCONVERSATIONCOUNT BigInt?
+  C_DAY                BigInt?
+  C_JOBMUMBER          String?   @db.VarChar(50)
+  C_STARTSTAMP         DateTime? @db.DateTime(0)
+  C_ID                 String    @id @db.VarChar(36)
+  C_OCONVERSATIONTIME  BigInt?
+  C_MONTH              BigInt?
+  C_OCALLCOUNT         BigInt?
+  C_SEATSECTORID       String?   @db.VarChar(50)
+  C_SEATSECTOR         String?   @db.VarChar(50)
+  C_HOUR               BigInt?
+  C_ICONVERSATIONTIME  BigInt?
+  C_ICALLCOUNT         BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_seattraffic {
+  C_YEAR                 BigInt?
+  C_OMAXCONVERSATIONTIME BigInt?
+  C_IMIXCONVERSATIONTIME BigInt?
+  C_AGENTNAME            String?   @db.VarChar(50)
+  C_ICONVERSATIONCOUNT   BigInt?
+  C_ICALLLOSSCOUNT       BigInt?
+  C_OCONVERSATIONCOUNT   BigInt?
+  C_OMIXCONVERSATIONTIME BigInt?
+  C_DAY                  BigInt?
+  C_JOBMUMBER            String?   @db.VarChar(50)
+  C_STARTSTAMP           DateTime? @db.DateTime(0)
+  C_ID                   String    @id @db.VarChar(36)
+  C_IMAXCONVERSATIONTIME BigInt?
+  C_OCALLLOSSCOUNT       BigInt?
+  C_INSUMRINGLENGTH      BigInt?
+  C_OCONVERSATIONTIME    BigInt?
+  C_MONTH                BigInt?
+  C_OCALLCOUNT           BigInt?
+  C_SEATSECTORID         String?   @db.VarChar(50)
+  C_SEATSECTOR           String?   @db.VarChar(50)
+  C_HOUR                 BigInt?
+  C_ICONVERSATIONTIME    BigInt?
+  C_ICALLCOUNT           BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_seattraffic_extension {
+  C_YEAR                 BigInt?
+  C_OMAXCONVERSATIONTIME BigInt?
+  C_IMIXCONVERSATIONTIME BigInt?
+  C_AGENTNAME            String?   @db.VarChar(50)
+  C_ICONVERSATIONCOUNT   BigInt?
+  C_ICALLLOSSCOUNT       BigInt?
+  C_OCONVERSATIONCOUNT   BigInt?
+  C_OMIXCONVERSATIONTIME BigInt?
+  C_DAY                  BigInt?
+  C_JOBMUMBER            String?   @db.VarChar(50)
+  C_STARTSTAMP           DateTime? @db.DateTime(0)
+  C_ID                   String    @id @db.VarChar(36)
+  C_IMAXCONVERSATIONTIME BigInt?
+  C_EXTENSION            String?   @db.VarChar(50)
+  C_OCALLLOSSCOUNT       BigInt?
+  C_INSUMRINGLENGTH      BigInt?
+  C_OCONVERSATIONTIME    BigInt?
+  C_MONTH                BigInt?
+  C_OCALLCOUNT           BigInt?
+  C_SEATSECTORID         String?   @db.VarChar(50)
+  C_SEATSECTOR           String?   @db.VarChar(50)
+  C_HOUR                 BigInt?
+  C_ICONVERSATIONTIME    BigInt?
+  C_ICALLCOUNT           BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_system {
+  C_YEAR                 BigInt?
+  C_OMAXCONVERSATIONTIME BigInt?
+  C_IMIXCONVERSATIONTIME BigInt?
+  C_INQUEUE              BigInt?
+  C_ICONVERSATIONCOUNT   BigInt?
+  C_OCONVERSATIONCOUNT   BigInt?
+  C_OMIXCONVERSATIONTIME BigInt?
+  C_DAY                  BigInt?
+  C_STARTSTAMP           DateTime? @db.DateTime(0)
+  C_ID                   String    @id @db.VarChar(36)
+  C_IMAXCONVERSATIONTIME BigInt?
+  C_EXTENSION            String?   @db.VarChar(50)
+  C_OCALLLOSSCOUNT       BigInt?
+  C_OCONVERSATIONTIME    BigInt?
+  C_MONTH                BigInt?
+  C_OCALLCOUNT           BigInt?
+  C_INTRANSFER           BigInt?
+  C_HOUR                 BigInt?
+  C_ICONVERSATIONTIME    BigInt?
+  C_ICALLCOUNT           BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_talk_time {
+  C_YEAR           BigInt?
+  tel20            BigInt?
+  tel30            BigInt?
+  C_AGENTNAME      String?   @db.VarChar(50)
+  tel0             BigInt?
+  tel40            BigInt?
+  tel900           BigInt?
+  C_DAY            BigInt?
+  tel180           BigInt?
+  tel50            BigInt?
+  C_JOBMUMBER      String?   @db.VarChar(50)
+  tel480           BigInt?
+  C_STARTSTAMP     DateTime? @db.DateTime(0)
+  tel60            BigInt?
+  tel120           BigInt?
+  C_ID             String    @id @db.VarChar(36)
+  C_MONTH          BigInt?
+  C_SEATSECTORID   String?   @db.VarChar(50)
+  telCount         BigInt?
+  C_SEATSECTOR     String?   @db.VarChar(50)
+  tel300           BigInt?
+  C_HOUR           BigInt?
+  direction        String?   @db.VarChar(10)
+  tel10            BigInt?
+  telSumTalkLength BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_middle_team {
+  C_YEAR               BigInt?
+  C_ICONVERSATIONCOUNT BigInt?
+  C_OCONVERSATIONCOUNT BigInt?
+  C_DAY                BigInt?
+  C_STARTSTAMP         DateTime? @db.DateTime(0)
+  C_ID                 String    @id @db.VarChar(36)
+  C_INSUMRINGLENGTH    BigInt?
+  C_OCONVERSATIONTIME  BigInt?
+  C_MONTH              BigInt?
+  C_OCALLCOUNT         BigInt?
+  C_SEATSECTORID       String?   @db.VarChar(50)
+  C_SEATSECTOR         String?   @db.VarChar(50)
+  C_HOUR               BigInt?
+  C_ICONVERSATIONTIME  BigInt?
+  C_ICALLCOUNT         BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_pbx_call {
+  C_OTHER        String? @db.VarChar(32)
+  C_AGENTNAME    String? @db.VarChar(256)
+  C_PBXNAME      String? @db.VarChar(32)
+  C_CITY         String? @db.VarChar(32)
+  C_IVRNAME      String? @db.VarChar(256)
+  C_TALKSECONDS  String? @db.VarChar(256)
+  C_ID           String  @id @db.VarChar(36)
+  C_NUMBER       String? @db.VarChar(32)
+  C_ISP          String? @db.VarChar(32)
+  C_STAYSECONDS  String? @db.VarChar(256)
+  C_AGENTSTAFFID String? @db.VarChar(256)
+  C_CALLSTATUS   String? @db.VarChar(32)
+  C_PROVINCE     String? @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_pbx_extension {
+  E_FORWARDBUSY      String? @db.VarChar(20)
+  E_ANSWERTIMES      BigInt?
+  E_FORWARDALL       String? @db.VarChar(20)
+  E_DIALOUTTIMES     BigInt?
+  E_WEIGHT           BigInt?
+  E_AGENTSTAFFID     String? @db.VarChar(256)
+  E_REGSTATUS        String? @db.VarChar(32)
+  E_BUSYSTRING       String? @db.VarChar(256)
+  E_SKILL            BigInt?
+  E_ID               String  @id @db.VarChar(36)
+  E_NUMBER           String? @db.VarChar(32)
+  E_FORWARDUR        String? @db.VarChar(20)
+  E_FORWARDNA        String? @db.VarChar(20)
+  E_PBXNAME          String? @db.VarChar(32)
+  E_STATUSTIMESTRING String? @db.VarChar(10)
+  E_LOGIN            String? @db.VarChar(32)
+  E_AGENTSTATUS      String? @db.VarChar(32)
+  E_AGENTNAME        String? @db.VarChar(256)
+  E_QUEUENAME        String? @db.VarChar(40)
+  E_SECTORNAME       String? @db.VarChar(36)
+  E_GROUP            String? @db.VarChar(32)
+  E_OTHER            String? @db.VarChar(32)
+  E_QUEUEDESC        String? @db.VarChar(40)
+  E_SECTORID         String? @db.VarChar(36)
+  E_CALLSTATUS       String? @db.VarChar(32)
+  E_DND              String? @db.VarChar(10)
+  E_LASTNUMBER       String? @db.VarChar(10)
+  E_DOMAIN           String? @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_pbx_license {
+  L_REGCODE   String?   @db.VarChar(256)
+  L_IVR       BigInt?
+  L_EXTERNAL  BigInt?
+  L_AGENT     BigInt?
+  L_PNAME     String?   @db.VarChar(40)
+  L_TTS       BigInt?
+  L_EXTENSION BigInt?
+  L_ACDGROUP  BigInt?
+  L_EXPIRE    DateTime? @db.DateTime(0)
+  L_PID       String?   @db.VarChar(40)
+  L_ACD       BigInt?
+  L_PDATA     String?   @db.VarChar(256)
+  L_ID        BigInt    @id @default(autoincrement())
+  L_CNAME     String?   @db.VarChar(256)
+  L_RECORDING BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_pbx_list {
+  P_PBXIP         String? @db.VarChar(36)
+  P_ID            String  @id @db.VarChar(36)
+  P_DBPORT        BigInt?
+  P_LICENSETEXT   String? @db.VarChar(2048)
+  P_DBSCHEMA      String? @db.VarChar(256)
+  P_DBIP          String? @db.VarChar(36)
+  P_CTIIP         String? @db.Text
+  P_DBUSER        String? @db.VarChar(36)
+  P_DBPASSWORD    String? @db.VarChar(36)
+  P_NAME          String? @db.VarChar(256)
+  P_LICENSESTATUS String? @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_trans_entry {
+  T_ORIGINAL    String?   @db.Text
+  T_SOURCE      String?   @db.VarChar(1024)
+  T_EDITOR      String?   @db.VarChar(40)
+  T_UTIME       DateTime? @db.DateTime(0)
+  T_STATUS      String?   @db.VarChar(12)
+  T_CTIME       DateTime? @db.DateTime(0)
+  T_TRANSLATION String?   @db.Text
+  T_LANGUAGEID  String?   @db.VarChar(40)
+  T_ID          String    @id @db.VarChar(36)
+  T_TYPE        String?   @db.VarChar(40)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model spzc_trans_languages {
+  T_NAME   String?   @db.VarChar(40)
+  T_DESC   String?   @db.VarChar(255)
+  T_UTIME  DateTime? @db.DateTime(0)
+  T_STATUS String?   @db.VarChar(12)
+  T_CTIME  DateTime? @db.DateTime(0)
+  T_ID     String    @id @db.VarChar(36)
+  T_DOMAIN String?   @db.VarChar(40)
+  T_TYPE   String?   @db.VarChar(12)
+}
