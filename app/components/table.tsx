@@ -1,66 +1,56 @@
-import { fetchUserRecords } from "../lib/data"
+'use client'
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
 
-type UserRecords = {
-    uuid: string,
-    outbound_cid: string,
-    destination_number: string,
-    direction: string,
-    start_stamp: string,
-    duration: number,
-    isanswer: boolean,
-    record_filename: string
-}
+export const MyTable = <T extends { uuid: string }>(
+    props: { data: T[] }
+) => {
 
+    const rows = props.data
 
-export const Table = async () => {
-    const userRecords = await fetchUserRecords()
-
-    const rows = userRecords.map((userRecord: UserRecords) => {
-        if (userRecord.direction === 'in') {
-            return {
-                ...userRecord,
-                local_number: userRecord.destination_number,
-                remote_number: userRecord.outbound_cid,
-            }
-        }
-        else return {
-            ...userRecord,
-            local_number: userRecord.outbound_cid,
-            remote_number: userRecord.destination_number,
-        }
-    })
-    console.log(rows[0].uuid)
+    console.log(rows[1].uuid)
     const columns = [
         {
-            key: '',
-            lable: '',
+            key: 'local_number',
+            label: '分机号',
         },
         {
-            key: '',
-            lable: '',
+            key: 'remote_number',
+            label: '对方号码',
         },
         {
-            key: '',
-            lable: '',
+            key: 'formattedStart_stamp',
+            label: '开始时间',
         },
         {
-            key: '',
-            lable: '',
+            key: 'directionFormatted',
+            label: '呼入/呼出',
         },
+        {
+            key: 'durationFormatted',
+            label: '通话时长',
+        },
+        {
+            key: 'isanswer',
+            label: '接听状态',
+        }
     ]
 
     return (
         <>
-            <p>Here is a table include records</p>
-
-            <p>uuid: {rows[0].uuid}</p>
-            {/* <p>{userRecord.duration}</p>
-                        <p>{userRecord.direction}</p>
-                        <p>{userRecord.isanswer}</p>
-                        <p>{userRecord.start_stamp}</p>
-                        <p>{userRecord.record_filename}</p> */}
-            <p>--------------</p>
-
+            <Table aria-label="This is a table">
+                <TableHeader>
+                    {columns.map((column) =>
+                        <TableColumn key={column.key}>{column.label}</TableColumn>
+                    )}
+                </TableHeader>
+                <TableBody>
+                    {rows.map((row) =>
+                        <TableRow key={row.uuid}>
+                            {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}
+                        </TableRow>
+                    )}
+                </TableBody>
+            </Table>
         </>
     )
 }

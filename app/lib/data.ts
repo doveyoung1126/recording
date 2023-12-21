@@ -30,7 +30,6 @@ export const fetchUserRecords = async () => {
             start_stamp: 'desc',
         },
     });
-    console.log(typeof data)
     return data
     // } catch (error) {
     //    throw new Error('Failed to fetch your query.')
