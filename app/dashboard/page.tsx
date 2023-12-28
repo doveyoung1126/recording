@@ -17,41 +17,41 @@ export default async function Page() {
             const minutes = Math.floor((seconds % 3600) / 60);
             const remainingSeconds = seconds % 60;
 
-            const formatDuration = `${hours}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
-            return formatDuration;
+            const formatedDuration = `${hours}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+            return formatedDuration;
         }
 
-        const textMap = {
-            inbound: '呼入',
-            outbound: '呼出',
+        const attachData: Record<string, any> = {
+            inbound: {
+                formattedDirection: '呼入',
+                formattedStart_stamp: userRecord.start_stamp?.toLocaleString('zh-CN'),
+                local_number: userRecord.destination_number,
+                remote_number: userRecord.outbound_cid,
+                formattedDuration: formatDuration(userRecord.duration)
+            },
+            outbound: {
+                formattedDirection: '呼出',
+                formattedStart_stamp: userRecord.start_stamp?.toLocaleString('zh-CN'),
+                local_number: userRecord.destination_number,
+                remote_number: userRecord.outbound_cid,
+                formattedDuration: formatDuration(userRecord.duration)
+            },
         }
-        switch (userRecord.direction) {
-            case 'inbound':
-                return {
-                    ...userRecord,
-                    directionFormatted: `${textMap[userRecord.direction]}`,
-                    formattedStart_stamp: userRecord.start_stamp?.toString(),
-                    local_number: userRecord.destination_number,
-                    remote_number: userRecord.outbound_cid,
-                    durationFormatted: formatDuration(userRecord.duration)
-                }
-            default:
-                return {
-                    ...userRecord,
-                    directionFormatted: `${textMap['outbound']}`,
-                    formattedStart_stamp: userRecord.start_stamp?.toString(),
-                    local_number: userRecord.outbound_cid,
-                    remote_number: userRecord.destination_number,
-                    durationFormatted: formatDuration(userRecord.duration)
-                }
-        }
+
+        return userRecord.direction ? {
+            ...userRecord,
+            ...attachData[userRecord.direction]
+        } : null
+
+
+
     })
     return (
         <>
-            <div className="flex">
-                <MyCard value={60} color="success" cardfoot="今日工作进度 [FAKE]" />
-                <MyCard value={80} color="success" cardfoot="本周工作进度 [FAKE]" />
-                <MyCard value={20} color="warning" cardfoot="本周拒接率 [FAKE]" />
+            <div className="flex " >
+                <MyCard value={50} color="success" cardfoot="通话个数 10 / 20" />
+                <MyCard value={40} color="success" cardfoot="今日时长 120 / 300" />
+                <MyCard value={30} color="warning" cardfoot="今日拒接率" />
             </div>
             <MyTable data={tableRecords} />
         </>
