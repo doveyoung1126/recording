@@ -22,11 +22,11 @@ export const MyTable = <T extends { uuid: string }>(
             label: '开始时间',
         },
         {
-            key: 'directionFormatted',
+            key: 'formattedDirection',
             label: '呼入/呼出',
         },
         {
-            key: 'durationFormatted',
+            key: 'formattedDuration',
             label: '通话时长',
         },
         {
@@ -36,21 +36,27 @@ export const MyTable = <T extends { uuid: string }>(
     ]
 
     return (
-        <>
-            <Table aria-label="This is a table">
-                <TableHeader>
-                    {columns.map((column) =>
-                        <TableColumn key={column.key}>{column.label}</TableColumn>
-                    )}
-                </TableHeader>
-                <TableBody>
-                    {rows.map((row) =>
-                        <TableRow key={row.uuid}>
-                            {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}
-                        </TableRow>
-                    )}
-                </TableBody>
-            </Table>
-        </>
+        <Table aria-label="This is a table"
+            // isStriped
+            selectionMode='single'
+            color="primary"
+            classNames={{
+                base: 'max-h-[500px] overflow-scroll'
+            }}
+            isHeaderSticky
+        >
+            <TableHeader>
+                {columns.map((column) =>
+                    <TableColumn key={column.key}>{column.label}</TableColumn>
+                )}
+            </TableHeader>
+            <TableBody>
+                {rows.map((row) =>
+                    <TableRow key={row.uuid}>
+                        {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}
+                    </TableRow>
+                )}
+            </TableBody>
+        </Table>
     )
 }
