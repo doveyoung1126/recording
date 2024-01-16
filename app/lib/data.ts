@@ -4,7 +4,7 @@ import { unstable_noStore as noStore } from 'next/cache';
 const prisma = new PrismaClient()
 
 
-export const fetchUserRecords = async (staffid: string, time: string) => {
+export const fetchDayUserRecords = async (staffid: string, time: string) => {
     noStore()
     //custom tmp param, delete later 
     const agent_staffid = staffid || '8283'
