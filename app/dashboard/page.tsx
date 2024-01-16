@@ -1,10 +1,14 @@
+// import { useState } from "react"
 import { MyCard } from "../components/cards"
 import { MyTable } from "../components/table"
-import { fetchUserRecords } from "../lib/data"
+import { fetchUserRecords, fetchUserRecentRecords } from "../lib/data"
 
 
 export default async function Page() {
-    const userRecords = await fetchUserRecords()
+    const currentDate = new Date().toISOString().slice(0, 10);
+    // const [startDate, setStartDate] = useState(currentDate)
+    const staffid = '8283'
+    const userRecords = await fetchUserRecentRecords(staffid, currentDate)
 
     const tableRecords = userRecords.map((userRecord) => {
         function formatDuration(seconds: number | null) {
@@ -32,8 +36,8 @@ export default async function Page() {
             outbound: {
                 formattedDirection: '呼出',
                 formattedStart_stamp: userRecord.start_stamp?.toLocaleString('zh-CN'),
-                local_number: userRecord.destination_number,
-                remote_number: userRecord.outbound_cid,
+                local_number: userRecord.outbound_cid,
+                remote_number: userRecord.destination_number,
                 formattedDuration: formatDuration(userRecord.duration)
             },
         }
@@ -43,15 +47,55 @@ export default async function Page() {
             ...attachData[userRecord.direction]
         } : null
 
-
-
     })
+    const totalMissionNum = 60
+    const totalMissionMinutes = 100
+
+    const compMission = () => {
+        const filteredRecordsDuration = userRecords.filter((userRecord) => {
+            return (
+                userRecord.duration && userRecord.duration > 1
+            )
+        })
+        const compTime = filteredRecordsDuration.reduce((acc, filteredRecord) => acc + (filteredRecord.duration ?? 0), 0)
+        const compNum = userRecords.length
+        const filteredRecordsAnswered = userRecords.filter((userRecord) => {
+            return (
+                userRecord.isanswer === '已接听'
+            )
+        })
+
+        return (
+            {
+                totalNum: compNum,
+                totalTime: compTime,
+                totalAnswered: filteredRecordsAnswered.length
+            }
+        )
+    }
+    console.log(compMission().totalNum, compMission().totalAnswered)
+    // console.log(tableRecords[0])
     return (
         <>
             <div className="flex " >
-                <MyCard value={50} color="success" cardfoot="通话个数 10 / 20" />
-                <MyCard value={40} color="success" cardfoot="今日时长 120 / 300" />
-                <MyCard value={30} color="warning" cardfoot="今日拒接率" />
+                <MyCard
+                    value={compMission().totalNum}
+                    maxValue={totalMissionNum}
+                    color="success"
+                    cardfoot={`通话个数${compMission().totalNum} / ${totalMissionNum} 个`}
+                />
+                <MyCard
+                    value={Math.floor(compMission().totalTime / 60)}
+                    maxValue={totalMissionMinutes}
+                    color="success"
+                    cardfoot={`今日时长 ${Math.floor(compMission().totalTime / 60)} / ${totalMissionMinutes} 分钟`}
+                />
+                <MyCard
+                    value={compMission().totalAnswered}
+                    maxValue={compMission().totalNum}
+                    color="success"
+                    cardfoot="接通率"
+                />
             </div>
             <MyTable data={tableRecords} />
         </>

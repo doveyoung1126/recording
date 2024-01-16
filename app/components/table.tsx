@@ -7,7 +7,7 @@ export const MyTable = <T extends { uuid: string }>(
 
     const rows = props.data
 
-    console.log(rows[1].uuid)
+    //console.log(rows[1].uuid)
     const columns = [
         {
             key: 'local_number',

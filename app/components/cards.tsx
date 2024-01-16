@@ -2,10 +2,12 @@ import { Card, CardHeader, CardBody, CardFooter, CircularProgress } from "@nextu
 
 export const MyCard = ({
     value,
+    maxValue,
     color,
     cardfoot,
 }: {
     value: number,
+    maxValue: number,
     color: "default" | "primary" | "secondary" | "success" | "warning" | "danger",
     cardfoot: string
 }) => {
@@ -26,6 +28,7 @@ export const MyCard = ({
                     showValueLabel={true}
                     aria-label="progress"
                     color={color}
+                    maxValue={maxValue}
                 />
             </CardBody>
             <CardFooter className="justify-center">
