@@ -1,0 +1,13 @@
+import LogtoClient from '@logto/next/edge';
+
+
+export const config = {
+    endpoint: 'https://example.logto.app/',
+    appId: '',
+    appSecret: '',
+    baseUrl: 'http://localhost:3000', // Change to your own base URL
+    cookieSecret: '', // Auto-generated 32 digit secret
+    cookieSecure: process.env.NODE_ENV === 'production',
+}
+
+export const logtoClient = new LogtoClient(config);

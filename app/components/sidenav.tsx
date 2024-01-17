@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Clock from './clock';
 import { Card, CardBody, CardFooter } from '@nextui-org/react';
+import { SignInOut } from './sign-in-out';
 
 export const SideNav = () => {
 
@@ -25,9 +26,9 @@ export const SideNav = () => {
                 <NavLinks />
                 <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
 
-                <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
-                    <div className="hidden md:block">Sign Out</div>
-                </button>
+
+                <SignInOut />
+
             </div>
         </div>
     )
