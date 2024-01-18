@@ -2,6 +2,14 @@
 import { type LogtoContext } from '@logto/next';
 import { cookies } from 'next/headers';
 
+type MyLogtoContext = LogtoContext & {
+    userInfo?: {
+        custom_data?: {
+            staffid?: string
+        }
+    }
+}
+
 // `server-only` guarantees any modules that import code in file
 // will never run on the client. Even though this particular api
 // doesn't currently use sensitive environment variables, it's
@@ -23,7 +31,7 @@ export async function getUser() {
     }
 
     // eslint-disable-next-line no-restricted-syntax
-    const user = (await response.json()) as LogtoContext;
+    const user = (await response.json()) as MyLogtoContext;
 
     return user;
 }

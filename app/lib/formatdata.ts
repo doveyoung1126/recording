@@ -12,7 +12,7 @@ export const formatUserTodayRecords = async (
         function formatDuration(seconds: number | null) {
 
             if (seconds === 0 || !seconds) {
-                return '0'
+                return '0:00:00'
             }
 
             const hours = Math.floor(seconds / 3600);

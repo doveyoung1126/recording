@@ -8,6 +8,7 @@ export const config = {
     baseUrl: 'http://localhost:3000', // Change to your own base URL
     cookieSecret: '', // Auto-generated 32 digit secret
     cookieSecure: process.env.NODE_ENV === 'production',
+    scopes: ['custom_data'],
 }
 
 export const logtoClient = new LogtoClient(config);

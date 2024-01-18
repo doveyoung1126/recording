@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+import { getUser } from "../api/logto/user/get-user";
 import { MyCard } from "../components/cards"
 import { MyTable } from "../components/table"
 import { formatUserTodayRecords } from "../lib/formatdata"
@@ -5,7 +7,15 @@ import { formatUserTodayRecords } from "../lib/formatdata"
 
 export default async function Page() {
     const currentDate = new Date().toISOString().slice(0, 10);
-    const staffid = '8283'
+    const user = await getUser()
+    if (!user.isAuthenticated) {
+        redirect('/api/logto/sign-in')
+    }
+
+
+    console.log(user)
+    const staffid = user.userInfo?.custom_data?.staffid || ''
+    // const staffid = '8283'
     const totalMissionNum = 60
     const totalMissionMinutes = 100
 
@@ -28,7 +38,7 @@ export default async function Page() {
                     value={Math.floor(missions.totalTime / 60)}
                     maxValue={totalMissionMinutes}
                     color={
-                        Math.floor(missions.totalTime / 60) / missions.totalNum > 0.5 ?
+                        Math.floor(missions.totalTime / 60) / totalMissionMinutes > 0.5 ?
                             "success" :
                             "warning"
                     }

@@ -4,11 +4,11 @@ import { unstable_noStore as noStore } from 'next/cache';
 const prisma = new PrismaClient()
 
 
-export const fetchDayUserRecords = async (staffid: string, time: string) => {
+export const fetchDayUserRecords = async (staffid: string, date: string) => {
     noStore()
     //custom tmp param, delete later 
-    const agent_staffid = staffid || '8283'
-    const start_stamp = time || '2023-10-20'
+    const agent_staffid = staffid
+    const start_stamp = date
     // try {
     const data = await prisma.spzc_cdr_cdr.findMany({
         where: {
