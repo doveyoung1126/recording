@@ -34,7 +34,7 @@ export const MyTable = <T extends { uuid: string }>(
             label: '接听状态',
         }
     ]
-
+    console.log(rows)
     return (
         <Table aria-label="This is a table"
             // isStriped

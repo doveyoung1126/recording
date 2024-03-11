@@ -9,11 +9,16 @@ export const formatUserTodayRecords = async (
 ) => {
     const userTodayRecords = await fetchDayUserRecords(staffid, date)
     const formattedUserTodayRecords = userTodayRecords.map((userTodayRecord) => {
-        function formatDuration(seconds: number | null) {
 
-            if (seconds === 0 || !seconds) {
-                return '0:00:00'
-            }
+        if (!userTodayRecord.direction
+            || userTodayRecord.direction === "local"
+            || !userTodayRecord.duration
+            || userTodayRecord.duration === 0) {
+
+            return
+        }
+
+        function formatDuration(seconds: number) {
 
             const hours = Math.floor(seconds / 3600);
             const minutes = Math.floor((seconds % 3600) / 60);
@@ -40,10 +45,13 @@ export const formatUserTodayRecords = async (
             },
         }
 
-        return userTodayRecord.direction ? {
+
+
+        return {
             ...userTodayRecord,
             ...attachData[userTodayRecord.direction]
-        } : null
+        };
+
 
     })
     const compMissions = () => {

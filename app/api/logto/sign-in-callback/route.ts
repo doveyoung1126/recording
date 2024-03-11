@@ -1,10 +1,10 @@
 // app/api/logto/sign-in-callback/route.ts
 import { type NextRequest } from 'next/server';
 
-import { logtoClient } from '../../../lib/logto';
+import { logtoClient, config } from '../../../lib/logto';
 
 export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
-    return logtoClient.handleSignInCallback()(request);
+    return logtoClient.handleSignInCallback(`${config.baseUrl}/dashboard`)(request);
 }

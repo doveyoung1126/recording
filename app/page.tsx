@@ -1,7 +1,9 @@
+import { redirect } from "next/navigation"
 
 const Home = () => {
   return (
-    <h1>Hello World111</h1>
+    <h1>Hello World</h1>
+    // redirect('/dashboard')
   )
 }
 
