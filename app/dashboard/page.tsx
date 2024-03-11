@@ -3,19 +3,21 @@ import { getUser } from "../api/logto/user/get-user";
 import { MyCard } from "../components/cards"
 import { MyTable } from "../components/table"
 import { formatUserTodayRecords } from "../lib/formatdata"
-
+import { taskRequirements } from "../lib/constant";
 
 export default async function Page() {
     const currentDate = new Date().toISOString().slice(0, 10);
     const user = await getUser()
-    if (!user.isAuthenticated) {
+    /* if (!user.isAuthenticated) {
         redirect('/api/logto/sign-in')
-    }
+    } */
 
 
     console.log(user)
     const staffid = user.userInfo?.custom_data?.staffid
-    if (!staffid) {
+    const userGroups: string = user.userInfo?.custom_data?.groups
+
+    if (!staffid || !userGroups) {
         return (
             <>
                 <h1>Are you sales?</h1>
@@ -26,39 +28,39 @@ export default async function Page() {
         )
     }
     // const staffid = '8283'
-    const totalMissionNum = 60
-    const totalMissionMinutes = 100
-
-    const { tableData, missions } = await formatUserTodayRecords(staffid, currentDate)
+    // const totalMissionNum = 60
+    // const totalMissionMinutes = 100
+    const { totalTaskNum, totalTaskMinutes } = taskRequirements[userGroups]
+    const { tableData, workLoad } = await formatUserTodayRecords(staffid, currentDate)
 
     return (
         <>
             <div className="flex " >
                 <MyCard
-                    value={missions.totalNum}
-                    maxValue={totalMissionNum}
+                    value={workLoad.totalNum}
+                    maxValue={totalTaskNum}
                     color={
-                        missions.totalNum / totalMissionNum > 0.5 ?
+                        workLoad.totalNum / totalTaskNum > 0.5 ?
                             "success" :
                             "warning"
                     }
-                    cardfoot={`通话个数${missions.totalNum} / ${totalMissionNum} 个`}
+                    cardfoot={`通话个数${workLoad.totalNum} / ${totalTaskNum} 个`}
                 />
                 <MyCard
-                    value={Math.floor(missions.totalTime / 60)}
-                    maxValue={totalMissionMinutes}
+                    value={Math.floor(workLoad.totalTime / 60)}
+                    maxValue={totalTaskMinutes}
                     color={
-                        Math.floor(missions.totalTime / 60) / totalMissionMinutes > 0.5 ?
+                        Math.floor(workLoad.totalTime / 60) / totalTaskMinutes > 0.5 ?
                             "success" :
                             "warning"
                     }
-                    cardfoot={`今日时长 ${Math.floor(missions.totalTime / 60)} / ${totalMissionMinutes} 分钟`}
+                    cardfoot={`今日时长 ${Math.floor(workLoad.totalTime / 60)} / ${totalTaskMinutes} 分钟`}
                 />
                 <MyCard
-                    value={missions.totalAnswered}
-                    maxValue={missions.totalNum}
+                    value={workLoad.totalAnswered}
+                    maxValue={workLoad.totalNum || 1}
                     color={
-                        missions.totalAnswered / missions.totalNum > 0.5 ?
+                        workLoad.totalAnswered / workLoad.totalNum > 0.5 ?
                             "success" :
                             "warning"
                     }

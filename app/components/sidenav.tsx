@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Clock from './clock';
-import { Card, CardBody, CardFooter } from '@nextui-org/react';
+import { Button, Card, CardBody, CardFooter, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import { SignInOut } from './sign-in-out';
 
 export const SideNav = () => {
@@ -24,6 +24,7 @@ export const SideNav = () => {
             {/* <Clock live={true} /> */}
             <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
                 <NavLinks />
+                <NavLinksInProgress />
                 <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
 
 
@@ -34,18 +35,32 @@ export const SideNav = () => {
     )
 }
 
-
+const NavLinksInProgress = () => {
+    return (
+        <Popover placement="right">
+            <PopoverTrigger>
+                <Button className='flex  flex-row justify-between '>通话量</Button>
+            </PopoverTrigger>
+            <PopoverContent>
+                <div className="px-1 py-2">
+                    <div className="text-small font-bold">施工中。。。</div>
+                    <div className="text-tiny">等待完善</div>
+                </div>
+            </PopoverContent>
+        </Popover>
+    );
+}
 
 const NavLinks = () => {
     const links = [
-        { name: 'Home', href: '/dashboard', icon: '', text: '主页' },
-        {
+        { name: 'Home', href: '/dashboard', icon: '', text: '通话记录' },
+        /* {
             name: 'Records',
             href: '/records',
             icon: '',
             text: '通话记录'
         },
-        { name: 'Missions', href: '/missions', icon: '', text: '通话量' },
+        { name: 'Missions', href: '/missions', icon: '', text: '通话量' }, */
     ];
 
     return (

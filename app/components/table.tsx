@@ -50,7 +50,7 @@ export const MyTable = <T extends { uuid: string }>(
                     <TableColumn key={column.key}>{column.label}</TableColumn>
                 )}
             </TableHeader>
-            <TableBody>
+            <TableBody emptyContent={"去打个电话吧，完成今天的任务！"}>
                 {rows.map((row) =>
                     <TableRow key={row.uuid}>
                         {(columnKey) => <TableCell>{getKeyValue(row, columnKey)}</TableCell>}

@@ -54,7 +54,7 @@ export const formatUserTodayRecords = async (
 
 
     })
-    const compMissions = () => {
+    const compWorkLoad = () => {
         const filteredRecordsDuration = userTodayRecords.filter((userTodayRecord) => {
             return (
                 userTodayRecord.duration && userTodayRecord.duration > 1
@@ -78,6 +78,6 @@ export const formatUserTodayRecords = async (
     }
     return {
         tableData: formattedUserTodayRecords,
-        missions: compMissions()
+        workLoad: compWorkLoad()
     }
 }

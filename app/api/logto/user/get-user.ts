@@ -5,7 +5,8 @@ import { cookies } from 'next/headers';
 type MyLogtoContext = LogtoContext & {
     userInfo?: {
         custom_data?: {
-            staffid?: string
+            staffid?: string,
+            [key: string]: any
         }
     }
 }
