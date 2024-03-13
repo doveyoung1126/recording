@@ -19,7 +19,10 @@ export const PopoverPlayer: React.FC<PopoverPlayerProps> = ({ src }) => {
         <Popover
             isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)} color='default' placement="bottom" showArrow={true}>
             <PopoverTrigger>
-                <Button >播放录音</Button>
+                <Button startContent={<PlayIcon filled='primary'
+                    height={24}
+                    width={24} />}
+                    size='sm' color="primary" variant="light" >播放</Button>
             </PopoverTrigger>
             <PopoverContent >
                 <div className="flex flex-col px-1 py-2 w-[150px] max-h-[100px]">

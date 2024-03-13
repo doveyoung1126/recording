@@ -1,8 +1,9 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button } from "@nextui-org/react";
 import React from "react";
 import { PopoverPlayer } from "./audioPlayer";
-import Link from "next/link";
+import { DownloadIcon } from '@/app/icons/downloadicon'
+import { MyButton } from "./mybutton"
 
 export const MyTable = <T extends { uuid: string }>(
     props: { data: T[] }
@@ -37,6 +38,8 @@ export const MyTable = <T extends { uuid: string }>(
             label: '接听状态',
         }
     ]
+
+
     // console.log(rows)
     const cellRender = React.useCallback((item: { [x: string]: any; }, columnKey: string | number) => {
 
@@ -45,13 +48,20 @@ export const MyTable = <T extends { uuid: string }>(
         switch (columnKey) {
             case "remote_number":
                 return (
-                    <>
-                        <p>{cellValue}</p>
-                        {item.record_filename
-                            ? <PopoverPlayer src={`http://219.143.69.18:81/${item.record_filename}`} />
-                            : <p>没有录音</p>}
-                        <Link href={`/api/download/${item.record_filename}`}>下载</Link>
-                    </>
+                    <div className="flex items-center w-fit">
+                        <div className="flex p2 w-32">{cellValue}</div>
+                        <div className="flex justify-start items-center">
+                            {item.record_filename
+                                ? <PopoverPlayer src={`http://219.143.69.18:81/${item.record_filename}`} />
+                                : <p>没有录音</p>}
+                            {item.record_filename &&
+
+                                <MyButton tmpurl={`/api/download/${item.record_filename}`} />
+                            }
+
+                        </div>
+
+                    </div>
                 )
 
             default:
