@@ -9,7 +9,7 @@ export const MyButton = ({ tmpurl }: { tmpurl: string }) => {
 
     const handleClick = () => {
         setIsLoading(true)
-        router.push(tmpurl)
+        router.replace(tmpurl)
 
         setTimeout(() => {
             setIsLoading(false)
@@ -23,7 +23,7 @@ export const MyButton = ({ tmpurl }: { tmpurl: string }) => {
             isLoading={isLoading}
             onClick={handleClick}
         >
-            {isLoading ? '下载中' : '下载'}
+            {isLoading ? '等待中' : '下载'}
         </Button>
     )
 }
