@@ -3,17 +3,19 @@ import { fetchDayUserRecords } from "./data"
 
 
 
-export const formatUserTodayRecords = async (
+export const formatData = async (
     staffid: string,
-    date: string
+    date: string,
+    userRole?: string
 ) => {
-    const userTodayRecords = await fetchDayUserRecords(staffid, date)
-    const formattedUserTodayRecords = userTodayRecords.map((userTodayRecord) => {
+    const fetchData = fetchDayUserRecords
+    const records = await fetchData(staffid, date)
+    const formattedData = records.map((record) => {
 
-        if (!userTodayRecord.direction
-            || userTodayRecord.direction === "local"
-            || !userTodayRecord.duration
-            || userTodayRecord.duration === 0) {
+        if (!record.direction
+            || record.direction === "local"
+            || !record.duration
+            || record.duration === 0) {
 
             return
         }
@@ -24,47 +26,47 @@ export const formatUserTodayRecords = async (
             const minutes = Math.floor((seconds % 3600) / 60);
             const remainingSeconds = seconds % 60;
 
-            const formatedDuration = `${hours}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
-            return formatedDuration;
+            const formattedDuration = `${hours}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+            return formattedDuration;
         }
 
         const attachData: Record<string, any> = {
             inbound: {
                 formattedDirection: '呼入',
-                formattedStart_stamp: userTodayRecord.start_stamp?.toLocaleString('zh-CN'),
-                local_number: userTodayRecord.destination_number,
-                remote_number: userTodayRecord.outbound_cid,
-                formattedDuration: formatDuration(userTodayRecord.duration)
+                formattedStart_stamp: record.start_stamp?.toLocaleString('zh-CN'),
+                local_number: record.destination_number,
+                remote_number: record.outbound_cid,
+                formattedDuration: formatDuration(record.duration)
             },
             outbound: {
                 formattedDirection: '呼出',
-                formattedStart_stamp: userTodayRecord.start_stamp?.toLocaleString('zh-CN'),
-                local_number: userTodayRecord.outbound_cid,
-                remote_number: userTodayRecord.destination_number,
-                formattedDuration: formatDuration(userTodayRecord.duration)
+                formattedStart_stamp: record.start_stamp?.toLocaleString('zh-CN'),
+                local_number: record.outbound_cid,
+                remote_number: record.destination_number,
+                formattedDuration: formatDuration(record.duration)
             },
         }
 
 
 
         return {
-            ...userTodayRecord,
-            ...attachData[userTodayRecord.direction]
+            ...records,
+            ...attachData[record.direction]
         };
 
 
     })
     const compWorkLoad = () => {
-        const filteredRecordsDuration = userTodayRecords.filter((userTodayRecord) => {
+        const filteredRecordsDuration = records.filter((record) => {
             return (
-                userTodayRecord.duration && userTodayRecord.duration > 1
+                record.duration && record.duration > 1
             )
         })
         const compTime = filteredRecordsDuration.reduce((acc, filteredRecord) => acc + (filteredRecord.duration ?? 0), 0)
-        const compNum = userTodayRecords.length
-        const filteredRecordsAnswered = userTodayRecords.filter((userTodayRecord) => {
+        const compNum = records.length
+        const filteredRecordsAnswered = records.filter((record) => {
             return (
-                userTodayRecord.isanswer === '已接听'
+                record.isanswer === '已接听'
             )
         })
 
@@ -77,7 +79,7 @@ export const formatUserTodayRecords = async (
         )
     }
     return {
-        tableData: formattedUserTodayRecords,
+        tableData: formattedData,
         workLoad: compWorkLoad()
     }
 }
