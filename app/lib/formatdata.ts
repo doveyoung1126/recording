@@ -1,15 +1,32 @@
 'use server'
-import { fetchDayUserRecords } from "./data"
+import { fetchCurrentUserRecords, fetchUsersRecords } from "./data"
+import type { MyRecord } from "./type"
 
-
-
-export const formatData = async (
+export const formatCurrentUserReocrds = async (
     staffid: string,
     date: string,
-    userRole?: string
 ) => {
-    const fetchData = fetchDayUserRecords
-    const records = await fetchData(staffid, date)
+    const fetchData = fetchCurrentUserRecords
+    const records: MyRecord = await fetchData(staffid, date)
+    const data = await formatData(records)
+
+    return data
+}
+
+export const formatUsersReocrds = async (
+    staffid: string,
+    date: string,
+    records: MyRecord,
+    isLeader?: boolean,
+) => {
+    // Wait for coding fetch data
+    const data = await formatData(records)
+
+    return data
+}
+
+const formatData = async (records: MyRecord) => {
+
     const formattedData = records.map((record) => {
 
         if (!record.direction
@@ -50,7 +67,7 @@ export const formatData = async (
 
 
         return {
-            ...records,
+            ...record,
             ...attachData[record.direction]
         };
 

@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getUser } from "../api/logto/user/get-user";
 import { MyCard } from "../components/cards"
 import { MyTable } from "../components/table"
-import { formatData } from "../lib/formatdata"
+import { formatCurrentUserReocrds } from "../lib/formatdata"
 import { taskRequirements } from "../lib/constant";
 
 export default async function Page() {
@@ -36,8 +36,7 @@ export default async function Page() {
         ? taskRequirements[userGroups]
         : { totalTaskNum: Infinity, totalTaskMinutes: Infinity }
 
-    const { tableData, workLoad } = await formatData(staffid, currentDate, userRole)
-
+    const { tableData, workLoad } = await formatCurrentUserReocrds(staffid, currentDate)
     return (
         <>
             {userAssessed &&
@@ -50,7 +49,7 @@ export default async function Page() {
                                 "success" :
                                 "warning"
                         }
-                        cardfoot={`通话个数${workLoad.totalNum} / ${totalTaskNum} 个`}
+                        cardfoot={`通话个数${workLoad.totalNum} / ${totalTaskNum === Infinity ? '∞' : totalTaskNum} 个`}
                     />
                     <MyCard
                         value={Math.floor(workLoad.totalTime / 60)}
@@ -60,7 +59,7 @@ export default async function Page() {
                                 "success" :
                                 "warning"
                         }
-                        cardfoot={`今日时长 ${Math.floor(workLoad.totalTime / 60)} / ${totalTaskMinutes} 分钟`}
+                        cardfoot={`今日时长 ${Math.floor(workLoad.totalTime / 60)} / ${totalTaskMinutes === Infinity ? '∞' : totalTaskMinutes} 分钟`}
                     />
                     <MyCard
                         value={workLoad.totalAnswered}
