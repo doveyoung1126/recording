@@ -1,17 +1,19 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button } from "@nextui-org/react";
-import React, { useState } from "react";
-import { PopoverPlayer } from "./audioPlayer";
-import { DownloadIcon } from '@/app/icons/downloadicon'
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input } from "@nextui-org/react"
+import React, { useCallback, useMemo, useState } from "react"
+import { PopoverPlayer } from "./audioPlayer"
 import { MyButton } from "./mybutton"
+import { SearchIcon } from "@/app/icons/searchicon"
 
-export const MyTable = <T extends { uuid: string }>(
+const AllRecordsTable = <T extends {
+    uuid: string,
+    local_number: string,
+    remote_number: string
+}>(
     props: { data: T[] }
 ) => {
-
-    const items = props.data
-
-    //console.log(rows[1].uuid)
+    const { data } = props
+    const items = data
     const columns = [
         {
             key: 'local_number',
@@ -38,9 +40,56 @@ export const MyTable = <T extends { uuid: string }>(
             label: '接听状态',
         }
     ]
+    console.log(data[0], "originalData")
+    const [filterValue, setFilterValue] = useState('')
+    const hasSearchFilter = Boolean(filterValue)
+
+    const filteredItems = React.useMemo(() => {
+        let filteredData = [...data]
 
 
-    // console.log(rows)
+        if (hasSearchFilter) {
+            filteredData = filteredData.filter((record) =>
+                record?.remote_number.toLowerCase().includes(filterValue.toLowerCase()),
+                //           || record.remote_number.toLowerCase().includes(filterValue.toLowerCase())
+            )
+            console.log(filteredData[0], "filtering")
+        }
+
+        console.log(filteredData[0], filteredData.length, "filtered")
+
+        return filteredData
+    }, [data, filterValue, hasSearchFilter])
+
+    console.log(filteredItems[0], data[0], "record")
+
+    const onSearchChange = useCallback((value: string | undefined) => {
+        if (value) {
+            setFilterValue(value)
+        } else {
+            setFilterValue("")
+        }
+    }, [])
+
+    const topContent = useMemo(() => {
+        return (
+            <Input
+                isClearable
+                classNames={{
+                    base: "w-full sm:max-w-[44%]",
+                    inputWrapper: "border-1",
+                }}
+                placeholder="搜索对方号码..."
+                size="sm"
+                startContent={<SearchIcon className="text-default-300" />}
+                value={filterValue}
+                variant="bordered"
+                onClear={() => setFilterValue("")}
+                onValueChange={onSearchChange}
+            />
+        )
+    }, [filterValue, onSearchChange])
+
     const cellRender = React.useCallback((item: { [x: string]: any; }, columnKey: string | number) => {
 
         const cellValue = item[columnKey]
@@ -68,6 +117,7 @@ export const MyTable = <T extends { uuid: string }>(
                 return cellValue
         }
     }, [])
+
     return (
         <Table aria-label="This is a table"
             // isStriped
@@ -77,13 +127,15 @@ export const MyTable = <T extends { uuid: string }>(
                 base: 'max-h-[500px] overflow-scroll'
             }}
             isHeaderSticky
+            topContent={topContent}
+            topContentPlacement="outside"
         >
             <TableHeader columns={columns}>
                 {(column) => (
                     <TableColumn key={column.key}>{column.label}</TableColumn>
                 )}
             </TableHeader>
-            <TableBody emptyContent={"去打个电话吧，完成今天的任务！"} items={items}>
+            <TableBody emptyContent={"还没有记录..."} items={filteredItems}>
                 {(item) => (
                     <TableRow key={item.uuid}>
                         {(columnKey) => <TableCell>{cellRender(item, columnKey)}</TableCell>}
@@ -93,3 +145,5 @@ export const MyTable = <T extends { uuid: string }>(
         </Table>
     )
 }
+
+export default AllRecordsTable

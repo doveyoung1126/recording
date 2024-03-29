@@ -9,7 +9,7 @@ export const fetchCurrentUserRecords = async (staffid: string, date: string, dat
     //custom tmp param, delete later 
     const agent_staffid = staffid
     const start_stamp = date
-    const start_stamp_end = date2 || date
+    const start_stamp_end = date2 ? (date2 < date ? date : date2) : date
 
     try {
         const data = await prisma.spzc_cdr_cdr.findMany({

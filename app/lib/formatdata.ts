@@ -16,10 +16,10 @@ export const formatCurrentUserReocrds = async (
 export const formatUsersReocrds = async (
     staffid: string,
     date: string,
-    records: MyRecord,
     isLeader?: boolean,
 ) => {
-    // Wait for coding fetch data
+    const fetchData = fetchUsersRecords
+    const records: MyRecord = await fetchData(staffid, date)
     const data = await formatData(records)
 
     return data

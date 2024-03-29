@@ -53,7 +53,7 @@ const NavLinksInProgress = () => {
 
 const NavLinks = () => {
     const links = [
-        { name: 'Home', href: '/dashboard', icon: '', text: '通话记录' },
+        { name: 'MyRecords', href: '/dashboard', icon: '', text: '我的通话记录' },
         /* {
             name: 'Records',
             href: '/records',

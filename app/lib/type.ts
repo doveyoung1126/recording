@@ -8,3 +8,11 @@ export type MyRecord = {
     destination_number: string | null;
     outbound_cid: string | null;
 }[]
+
+export type TableData = {
+    formattedDirection: string,
+    formattedStart_stamp?: string,
+    local_number?: string,
+    remote_number?: string,
+    formattedDuration: string
+}[]
