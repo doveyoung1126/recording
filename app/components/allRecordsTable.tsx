@@ -14,6 +14,7 @@ const AllRecordsTable = <T extends {
 ) => {
     const { data } = props
     const items = data
+    const isSearchAble: boolean = false
     const columns = [
         {
             key: 'local_number',
@@ -127,7 +128,7 @@ const AllRecordsTable = <T extends {
                 base: 'max-h-[500px] overflow-scroll'
             }}
             isHeaderSticky
-            topContent={topContent}
+            topContent={isSearchAble && topContent}
             topContentPlacement="outside"
         >
             <TableHeader columns={columns}>

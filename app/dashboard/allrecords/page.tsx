@@ -1,5 +1,6 @@
 import { getUser } from "../../api/logto/user/get-user"
 import AllRecordsTable from "../../components/allRecordsTable"
+import { MyTable } from "@/app/components/table"
 import { formatUsersReocrds } from "../../lib/formatdata"
 
 const Page = async () => {
@@ -66,7 +67,8 @@ const Page = async () => {
     ]
     return (
         <>
-            <AllRecordsTable data={tableData} />
+            {/* <AllRecordsTable data={tableData} /> */}
+            <MyTable data={tableData} isSearchAble />
         </>
     )
 
