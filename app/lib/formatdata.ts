@@ -26,18 +26,23 @@ export const formatUsersReocrds = async (
 }
 
 const formatData = async (records: MyRecord) => {
+    const filteredData = records.filter((record) => (
+        record.direction !== "local" && Boolean(record.duration) && Boolean(record.direction)
+    ))
 
-    const formattedData = records.map((record) => {
+    const formattedData = filteredData.map((record) => {
 
-        if (!record.direction
-            || record.direction === "local"
-            || !record.duration
-            || record.duration === 0) {
-
-            return
-        }
-
-        function formatDuration(seconds: number) {
+        /*         if (!record.direction
+                    || record.direction === "local"
+                    || !record.duration
+                    || record.duration === 0) {
+        
+                    return
+                }
+         */
+        const direction = record.direction || "未知"
+        function formatDuration(duration: number | null) {
+            const seconds = duration || 0
 
             const hours = Math.floor(seconds / 3600);
             const minutes = Math.floor((seconds % 3600) / 60);
@@ -68,7 +73,7 @@ const formatData = async (records: MyRecord) => {
 
         return {
             ...record,
-            ...attachData[record.direction]
+            ...attachData[direction]
         };
 
 

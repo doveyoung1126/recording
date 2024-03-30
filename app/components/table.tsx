@@ -1,9 +1,10 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import React, { useState } from "react";
 import { PopoverPlayer } from "./audioPlayer";
 import { MyButton } from "./mybutton"
 import { SearchIcon } from "../icons/searchicon";
+import { DropdownIcon } from "../icons/DropdownIcon"
 
 export const MyTable = <T extends {
     uuid: string,
@@ -49,13 +50,16 @@ export const MyTable = <T extends {
     const [filterValue, setFilterValue] = useState('')
     const hasSearchFilter = Boolean(filterValue)
 
+    const staffArray = Array.from(new Set(items.map((record) => record.local_number))).sort()
+    const [staffFilter, setStaffFilter] = useState<any>([])
+
     const filteredItems = React.useMemo(() => {
         let filteredData = [...items]
 
 
         if (hasSearchFilter) {
             filteredData = filteredData.filter((record) =>
-                record?.remote_number.toLowerCase().includes(filterValue.toLowerCase()),
+                record.remote_number.toLowerCase().includes(filterValue.toLowerCase()),
                 //           || record.remote_number.toLowerCase().includes(filterValue.toLowerCase())
             )
             console.log(filteredData[0], "filtering")
@@ -75,23 +79,51 @@ export const MyTable = <T extends {
     }, [])
 
     const topContent = React.useMemo(() => {
+        if (staffArray === staffFilter) {
+            setStaffFilter([])
+        }
         return (
-            <Input
-                isClearable
-                classNames={{
-                    base: "w-full sm:max-w-[44%]",
-                    inputWrapper: "border-1",
-                }}
-                placeholder="搜索对方号码..."
-                size="sm"
-                startContent={<SearchIcon className="text-default-300" />}
-                value={filterValue}
-                variant="bordered"
-                onClear={() => setFilterValue("")}
-                onValueChange={onSearchChange}
-            />
+            <div className="flex justify-between gap-3 items-end">
+                <Input
+                    isClearable
+                    classNames={{
+                        base: "w-full sm:max-w-[44%]",
+                        inputWrapper: "border-1",
+                    }}
+                    placeholder="搜索对方号码..."
+                    size="sm"
+                    startContent={<SearchIcon className="text-default-300" />}
+                    value={filterValue}
+                    variant="bordered"
+                    onClear={() => setFilterValue("")}
+                    onValueChange={onSearchChange}
+                />
+                <div className="flex gap-3">
+                    <Dropdown>
+                        <DropdownTrigger className="hidden sm:flex">
+                            <Button endContent={<DropdownIcon className="text-small" />} variant="flat">
+                                所有分机
+                            </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu
+                            disallowEmptySelection
+                            aria-label="Table Columns"
+                            closeOnSelect={false}
+                            selectedKeys={staffFilter}
+                            selectionMode="multiple"
+                            onSelectionChange={setStaffFilter}
+                        >
+                            {staffArray.map((staff) => (
+                                <DropdownItem key={staff} >
+                                    {staff}
+                                </DropdownItem>
+                            ))}
+                        </DropdownMenu>
+                    </Dropdown>
+                </div>
+            </div>
         )
-    }, [filterValue, onSearchChange])
+    }, [filterValue, onSearchChange, staffArray, staffFilter])
 
     // console.log(rows)
     const cellRender = React.useCallback((item: { [x: string]: any; }, columnKey: string | number) => {

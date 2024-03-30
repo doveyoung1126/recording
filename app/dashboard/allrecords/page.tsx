@@ -1,5 +1,4 @@
 import { getUser } from "../../api/logto/user/get-user"
-import AllRecordsTable from "../../components/allRecordsTable"
 import { MyTable } from "@/app/components/table"
 import { formatUsersReocrds } from "../../lib/formatdata"
 
@@ -19,7 +18,7 @@ const Page = async () => {
         )
     }
 
-    const { tableData } = await formatUsersReocrds(staffid, currentDate)
+    const { tableData } = await formatUsersReocrds(staffid, "2024-03-28")
     const tmpdata = [
         {
             uuid: '7ea699f6-ece5-11ee-8dc0-89a67eeb5b6f',
