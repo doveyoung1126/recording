@@ -67,7 +67,9 @@ const Page = async () => {
     return (
         <>
             {/* <AllRecordsTable data={tableData} /> */}
-            <MyTable data={tableData} isSearchAble />
+            <div className="flex  pb-10 bg-red-200 h-full" >
+                <MyTable data={tableData} isSearchAble />
+            </div>
         </>
     )
 

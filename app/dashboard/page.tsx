@@ -71,8 +71,11 @@ export default async function Page() {
                         }
                         cardfoot="接通率"
                     />
-                </div>}
-            <MyTable data={tableData} />
+                </div>
+            }
+            <div className='flex  pb-10 bg-red-200 h-full'>
+                <MyTable data={tableData} />
+            </div>
         </>
     )
 }

@@ -1,10 +1,13 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Pagination } from "@nextui-org/react";
 import React, { useState } from "react";
 import { PopoverPlayer } from "./audioPlayer";
 import { MyButton } from "./mybutton"
 import { SearchIcon } from "../icons/searchicon";
 import { DropdownIcon } from "../icons/DropdownIcon"
+import { useDebouncedCallback } from 'use-debounce';
+import { Select, SelectItem } from "@nextui-org/react";
+
 
 export const MyTable = <T extends {
     uuid: string,
@@ -47,12 +50,20 @@ export const MyTable = <T extends {
             label: '接听状态',
         }
     ]
+    // Split the value in SearchBox into diffirent use, filter and display
     const [filterValue, setFilterValue] = useState('')
+    const [inputValue, setInputValue] = useState('')
+
+    const [page, setPage] = useState(1)
+    const [rowsPerPage, setRowsPerPage] = useState(10)
+
     const hasSearchFilter = Boolean(filterValue)
 
     const staffArray = Array.from(new Set(items.map((record) => record.local_number))).sort()
     const [staffFilter, setStaffFilter] = useState<any>([])
+    const tmpstaffarr = Array.from(staffFilter)
 
+    console.log(tmpstaffarr)
     const filteredItems = React.useMemo(() => {
         let filteredData = [...items]
 
@@ -60,28 +71,66 @@ export const MyTable = <T extends {
         if (hasSearchFilter) {
             filteredData = filteredData.filter((record) =>
                 record.remote_number.toLowerCase().includes(filterValue.toLowerCase()),
-                //           || record.remote_number.toLowerCase().includes(filterValue.toLowerCase())
             )
-            console.log(filteredData[0], "filtering")
         }
 
-        console.log(filteredData[0], filteredData.length, "filtered")
+        if (Array.from(staffFilter).length !== staffArray.length && Array.from(staffFilter).length !== 0) {
+            filteredData = filteredData.filter((record) => (
+                Array.from(staffFilter).includes(record.local_number)
+            ))
+        }
 
+        setPage(1)
         return filteredData
-    }, [filterValue, hasSearchFilter, items])
+    }, [filterValue, hasSearchFilter, items, staffArray.length, staffFilter])
 
-    const onSearchChange = React.useCallback((value: string | undefined) => {
+    const pages = Math.max(Math.ceil(filteredItems.length / rowsPerPage), 1)
+
+    const pageItems = React.useMemo(() => {
+        const start = (page - 1) * rowsPerPage
+        const end = start + rowsPerPage
+
+        return filteredItems.slice(start, end)
+    }, [filteredItems, page, rowsPerPage])
+
+
+    const handleFilter = useDebouncedCallback((value: string | undefined) => {
         if (value) {
             setFilterValue(value)
         } else {
             setFilterValue("")
         }
-    }, [])
+    }, 300)
+
+    const onNextPage = React.useCallback(() => {
+        if (page < pages) {
+            setPage(page + 1)
+        }
+    }, [page, pages])
+    const onPreviousPage = React.useCallback(() => {
+        if (page > 1) {
+            setPage(page - 1)
+        }
+    }, [page])
 
     const topContent = React.useMemo(() => {
-        if (staffArray === staffFilter) {
+
+        if (Array.from(staffFilter).length === staffArray.length && staffArray.length !== 0) {
             setStaffFilter([])
         }
+
+        const handleInput = (value: string | undefined) => {
+            if (value) {
+                setInputValue(value)
+                handleFilter(value)
+                setPage(1)
+            } else {
+                setInputValue("")
+                handleFilter(value)
+                setPage(1)
+            }
+        }
+
         return (
             <div className="flex justify-between gap-3 items-end">
                 <Input
@@ -93,21 +142,36 @@ export const MyTable = <T extends {
                     placeholder="搜索对方号码..."
                     size="sm"
                     startContent={<SearchIcon className="text-default-300" />}
-                    value={filterValue}
+                    value={inputValue}
                     variant="bordered"
-                    onClear={() => setFilterValue("")}
-                    onValueChange={onSearchChange}
+                    onClear={() => setInputValue("")}
+                    onValueChange={handleInput}
                 />
+                {/* <div className="flex w-full max-w-xs flex-col gap-2">
+                    <Select
+                        label="过滤分机"
+                        placeholder="所有分机"
+                        selectionMode="multiple"
+                        selectedKeys={staffFilter}
+                        onSelectionChange={setStaffFilter}
+                    >
+                        {staffArray.map((staff) => (
+                            <SelectItem key={staff} value={staff}>
+                                {staff}
+                            </SelectItem>
+                        ))}
+                    </Select>
+                </div> */}
                 <div className="flex gap-3">
                     <Dropdown>
                         <DropdownTrigger className="hidden sm:flex">
                             <Button endContent={<DropdownIcon className="text-small" />} variant="flat">
-                                所有分机
+                                {staffFilter.length === 0 ? "所有分机" : "正在过滤分机..."}
                             </Button>
                         </DropdownTrigger>
                         <DropdownMenu
-                            disallowEmptySelection
-                            aria-label="Table Columns"
+                            //disallowEmptySelection
+                            aria-label="Staffid Columns"
                             closeOnSelect={false}
                             selectedKeys={staffFilter}
                             selectionMode="multiple"
@@ -121,9 +185,36 @@ export const MyTable = <T extends {
                         </DropdownMenu>
                     </Dropdown>
                 </div>
+
             </div>
         )
-    }, [filterValue, onSearchChange, staffArray, staffFilter])
+    }, [handleFilter, inputValue, staffArray, staffFilter])
+    const bottomContent = React.useMemo(() => {
+        return (
+            <div className="py-2 px-2 flex justify-center items-center">
+                {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
+                    <Button isDisabled={pages === 1 || page === 1} size="sm" variant="flat" onPress={onPreviousPage}>
+                        Previous
+                    </Button>
+                </div> */}
+                <Pagination
+                    isCompact
+                    showControls
+                    showShadow
+                    color="primary"
+                    page={page}
+                    total={pages}
+                    onChange={setPage}
+                />
+
+                {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
+                    <Button isDisabled={pages === 1} size="sm" variant="flat" onPress={onNextPage}>
+                        Next
+                    </Button>
+                </div> */}
+            </div>
+        )
+    }, [page, pages])
 
     // console.log(rows)
     const cellRender = React.useCallback((item: { [x: string]: any; }, columnKey: string | number) => {
@@ -155,14 +246,13 @@ export const MyTable = <T extends {
     }, [])
     return (
         <Table aria-label="This is a table"
-            // isStriped
-            selectionMode='single'
+            isStriped
+            // selectionMode='single'
             color="primary"
-            classNames={{
-                base: 'max-h-[500px] overflow-scroll'
-            }}
             topContent={isSearchAble && topContent}
             topContentPlacement="outside"
+            bottomContent={bottomContent}
+            bottomContentPlacement="outside"
             isHeaderSticky
         >
             <TableHeader columns={columns}>
@@ -170,7 +260,9 @@ export const MyTable = <T extends {
                     <TableColumn key={column.key}>{column.label}</TableColumn>
                 )}
             </TableHeader>
-            <TableBody emptyContent={"去打个电话吧，完成今天的任务！"} items={filteredItems}>
+            <TableBody
+                emptyContent={isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！"}
+                items={pageItems}>
                 {(item) => (
                     <TableRow key={item.uuid}>
                         {(columnKey) => <TableCell>{cellRender(item, columnKey)}</TableCell>}
