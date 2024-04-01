@@ -6,8 +6,7 @@ import { MyButton } from "./mybutton"
 import { SearchIcon } from "../icons/searchicon";
 import { DropdownIcon } from "../icons/DropdownIcon"
 import { useDebouncedCallback } from 'use-debounce';
-import { Select, SelectItem } from "@nextui-org/react";
-
+import { Spinner } from "@nextui-org/react";
 
 export const MyTable = <T extends {
     uuid: string,
@@ -17,6 +16,7 @@ export const MyTable = <T extends {
     props: {
         data: T[],
         isSearchAble?: boolean
+        fetchData?: Function
     }
 ) => {
 
@@ -191,7 +191,7 @@ export const MyTable = <T extends {
     }, [handleFilter, inputValue, staffArray, staffFilter])
     const bottomContent = React.useMemo(() => {
         return (
-            <div className="py-2 px-2 flex justify-center items-center">
+            <div className="py-2 px-2 flex justify-center items-center bg-green-200">
                 {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
                     <Button isDisabled={pages === 1 || page === 1} size="sm" variant="flat" onPress={onPreviousPage}>
                         Previous
@@ -261,8 +261,10 @@ export const MyTable = <T extends {
                 )}
             </TableHeader>
             <TableBody
+                loadingContent={<Spinner label="正在加载..." />}
                 emptyContent={isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！"}
                 items={pageItems}>
+
                 {(item) => (
                     <TableRow key={item.uuid}>
                         {(columnKey) => <TableCell>{cellRender(item, columnKey)}</TableCell>}

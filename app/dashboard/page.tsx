@@ -73,7 +73,7 @@ export default async function Page() {
                     />
                 </div>
             }
-            <div className='flex  pb-10 bg-red-200 h-full'>
+            <div className='flex  pb-5 bg-red-200 h-full'>
                 <MyTable data={tableData} />
             </div>
         </>
