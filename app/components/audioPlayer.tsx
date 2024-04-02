@@ -141,7 +141,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, setIsOpen }) => {
                 color="success"
                 className="max-w-md mt-2 flex"
             />
-            {/* <a href={src} download>下载</a> */}
         </div>
     );
 }

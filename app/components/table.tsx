@@ -1,5 +1,5 @@
 'use client'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Button, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Pagination } from "@nextui-org/react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Button, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Pagination } from "@nextui-org/react";
 import React, { useState } from "react";
 import { PopoverPlayer } from "./audioPlayer";
 import { MyButton } from "./mybutton"
@@ -20,10 +20,8 @@ export const MyTable = <T extends {
     }
 ) => {
 
-    //const items = props.data
     const { isSearchAble, data: items } = props
 
-    //console.log(rows[1].uuid)
     const columns = [
         {
             key: 'local_number',
@@ -63,7 +61,6 @@ export const MyTable = <T extends {
     const [staffFilter, setStaffFilter] = useState<any>([])
     const tmpstaffarr = Array.from(staffFilter)
 
-    console.log(tmpstaffarr)
     const filteredItems = React.useMemo(() => {
         let filteredData = [...items]
 
@@ -102,17 +99,6 @@ export const MyTable = <T extends {
         }
     }, 300)
 
-    const onNextPage = React.useCallback(() => {
-        if (page < pages) {
-            setPage(page + 1)
-        }
-    }, [page, pages])
-    const onPreviousPage = React.useCallback(() => {
-        if (page > 1) {
-            setPage(page - 1)
-        }
-    }, [page])
-
     const topContent = React.useMemo(() => {
 
         if (Array.from(staffFilter).length === staffArray.length && staffArray.length !== 0) {
@@ -147,21 +133,6 @@ export const MyTable = <T extends {
                     onClear={() => setInputValue("")}
                     onValueChange={handleInput}
                 />
-                {/* <div className="flex w-full max-w-xs flex-col gap-2">
-                    <Select
-                        label="过滤分机"
-                        placeholder="所有分机"
-                        selectionMode="multiple"
-                        selectedKeys={staffFilter}
-                        onSelectionChange={setStaffFilter}
-                    >
-                        {staffArray.map((staff) => (
-                            <SelectItem key={staff} value={staff}>
-                                {staff}
-                            </SelectItem>
-                        ))}
-                    </Select>
-                </div> */}
                 <div className="flex gap-3">
                     <Dropdown>
                         <DropdownTrigger className="hidden sm:flex">
@@ -192,11 +163,6 @@ export const MyTable = <T extends {
     const bottomContent = React.useMemo(() => {
         return (
             <div className="py-2 px-2 flex justify-center items-center bg-green-200">
-                {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
-                    <Button isDisabled={pages === 1 || page === 1} size="sm" variant="flat" onPress={onPreviousPage}>
-                        Previous
-                    </Button>
-                </div> */}
                 <Pagination
                     isCompact
                     showControls
@@ -206,17 +172,10 @@ export const MyTable = <T extends {
                     total={pages}
                     onChange={setPage}
                 />
-
-                {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
-                    <Button isDisabled={pages === 1} size="sm" variant="flat" onPress={onNextPage}>
-                        Next
-                    </Button>
-                </div> */}
             </div>
         )
     }, [page, pages])
 
-    // console.log(rows)
     const cellRender = React.useCallback((item: { [x: string]: any; }, columnKey: string | number) => {
 
         const cellValue = item[columnKey]

@@ -19,7 +19,6 @@ export const MyCard = ({
                 <CircularProgress
                     classNames={{
                         svg: "w-36 h-36 drop-shadow-md",
-                        // indicator: "stroke-white",
                         track: "stroke-black/10",
                         value: `text-3xl font-semibold text-${color}`,
                     }}

@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import Clock from './clock';
 import { Button, Card, CardBody, CardFooter, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import { SignInOut } from './sign-in-out';
 import { NavLinks } from './navlinks';
-import clsx from 'clsx'
 
 export const SideNav = () => {
 
@@ -22,10 +20,7 @@ export const SideNav = () => {
                 <NavLinks />
                 <NavLinksInProgress />
                 <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
-
-
                 <SignInOut />
-
             </div>
         </div>
     )
@@ -47,36 +42,3 @@ const NavLinksInProgress = () => {
     );
 }
 
-const OldNavLinks = () => {
-
-    const links = [
-        { name: 'MyRecords', href: '/dashboard', icon: '', text: '我的通话记录' },
-        { name: 'allRecords', href: '/dashboard/allrecords', icon: '', text: '所有通话记录' }
-        /* {
-            name: 'Records',
-            href: '/records',
-            icon: '',
-            text: '通话记录'
-        },
-        { name: 'Missions', href: '/missions', icon: '', text: '通话量' }, */
-    ];
-
-    return (
-        <>
-            {
-                links.map(link => {
-                    return (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-
-                            className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"                    >
-                            {link.text}
-                        </Link>
-                    )
-                })
-            }
-        </>
-
-    )
-}

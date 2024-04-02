@@ -19,54 +19,9 @@ const Page = async () => {
     }
 
     const { tableData } = await formatUsersReocrds(staffid, "2024-03-28")
-    const tmpdata = [
-        {
-            uuid: '7ea699f6-ece5-11ee-8dc0-89a67eeb5b6f',
-            outbound_cid: '8283',
-            destination_number: '9013469180889',
-            direction: 'outbound',
-            start_stamp: '2024-03-28T17:28:10.000Z',
-            duration: 10,
-            isanswer: '未接听',
-            record_filename: null,
-            formattedDirection: '呼出',
-            formattedStart_stamp: '2024/3/28 17:28:10',
-            local_number: '8283',
-            remote_number: '9013469180889',
-            formattedDuration: '0:00:10'
-        }, {
-            uuid: '8ea699f6-ece5-11ee-8dc0-89a67eeb5b6f',
-            outbound_cid: '8283',
-            destination_number: '9013469180889',
-            direction: 'outbound',
-            start_stamp: '2024-03-28T17:28:10.000Z',
-            duration: 10,
-            isanswer: '未接听',
-            record_filename: null,
-            formattedDirection: '呼出',
-            formattedStart_stamp: '2024/3/28 17:28:10',
-            local_number: '8283',
-            remote_number: '9013469180889',
-            formattedDuration: '0:00:10'
-        }, {
-            uuid: '6ea699f6-ece5-11ee-8dc0-89a67eeb5b6f',
-            outbound_cid: '8253',
-            destination_number: '9013469180889',
-            direction: 'outbound',
-            start_stamp: '2024-03-28T17:28:10.000Z',
-            duration: 10,
-            isanswer: '未接听',
-            record_filename: null,
-            formattedDirection: '呼出',
-            formattedStart_stamp: '2024/3/28 17:28:10',
-            local_number: '8253',
-            remote_number: '9013469180889',
-            formattedDuration: '0:00:10'
-        }
-    ]
+
     return (
         <>
-            {/* <AllRecordsTable data={tableData} /> */}
             <div className="flex  pb-10 bg-red-200 h-full" >
                 <MyTable data={tableData} isSearchAble />
             </div>

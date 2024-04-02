@@ -1,4 +1,3 @@
-// app/api/logto/user/get-user.ts
 import { type LogtoContext } from '@logto/next';
 import { cookies } from 'next/headers';
 
@@ -31,7 +30,6 @@ export async function getUser() {
         throw new Error('Something went wrong!');
     }
 
-    // eslint-disable-next-line no-restricted-syntax
     const user = (await response.json()) as MyLogtoContext;
 
     return user;

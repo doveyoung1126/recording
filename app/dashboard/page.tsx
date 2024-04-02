@@ -8,10 +8,6 @@ import { taskRequirements } from "../lib/constant";
 export default async function Page() {
     const currentDate = new Date().toISOString().slice(0, 10);
     const user = await getUser()
-    /* if (!user.isAuthenticated) {
-        redirect('/api/logto/sign-in')
-    } */
-
 
     console.log(user)
     const staffid = user.userInfo?.custom_data?.staffid
@@ -29,9 +25,7 @@ export default async function Page() {
             </>
         )
     }
-    // const staffid = '8283'
-    // const totalMissionNum = 60
-    // const totalMissionMinutes = 100
+
     const { totalTaskNum, totalTaskMinutes }: { totalTaskNum: number, totalTaskMinutes: number } = userGroups
         ? taskRequirements[userGroups]
         : { totalTaskNum: Infinity, totalTaskMinutes: Infinity }
