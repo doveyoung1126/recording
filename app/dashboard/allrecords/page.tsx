@@ -1,6 +1,7 @@
 import { getUser } from "../../api/logto/user/get-user"
 import { MyTable } from "@/app/components/table"
 import { formatUsersReocrds } from "../../lib/formatdata"
+import { TableWithDatePicker } from "@/app/components/table-with-datepicker";
 
 const Page = async () => {
     const currentDate = new Date().toISOString().slice(0, 10);
@@ -18,12 +19,10 @@ const Page = async () => {
         )
     }
 
-    const { tableData } = await formatUsersReocrds(staffid, "2024-03-28")
-
     return (
         <>
             <div className="flex  pb-10 bg-red-200 h-full" >
-                <MyTable data={tableData} isSearchAble />
+                <TableWithDatePicker staffid={staffid} />
             </div>
         </>
     )

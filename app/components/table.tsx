@@ -16,11 +16,11 @@ export const MyTable = <T extends {
     props: {
         data: T[],
         isSearchAble?: boolean
-        fetchData?: Function
+        isLoading?: boolean
     }
 ) => {
 
-    const { isSearchAble, data: items } = props
+    const { isSearchAble, data: items, isLoading } = props
 
     const columns = [
         {
@@ -118,11 +118,11 @@ export const MyTable = <T extends {
         }
 
         return (
-            <div className="flex justify-between gap-3 items-end">
+            <div className="flex justify-left gap-3 items-end">
                 <Input
                     isClearable
                     classNames={{
-                        base: "w-full sm:max-w-[44%]",
+                        base: "w-full sm:max-w-[30%]",
                         inputWrapper: "border-1",
                     }}
                     placeholder="搜索对方号码..."
@@ -137,7 +137,7 @@ export const MyTable = <T extends {
                     <Dropdown>
                         <DropdownTrigger className="hidden sm:flex">
                             <Button endContent={<DropdownIcon className="text-small" />} variant="flat">
-                                {staffFilter.length === 0 ? "所有分机" : "正在过滤分机..."}
+                                {Array.from(staffFilter).length === 0 ? "所有分机" : "正在过滤分机..."}
                             </Button>
                         </DropdownTrigger>
                         <DropdownMenu
@@ -220,8 +220,9 @@ export const MyTable = <T extends {
                 )}
             </TableHeader>
             <TableBody
+                isLoading={isLoading}
                 loadingContent={<Spinner label="正在加载..." />}
-                emptyContent={isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！"}
+                emptyContent={isLoading ?? (isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！")}
                 items={pageItems}>
 
                 {(item) => (
