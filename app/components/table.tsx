@@ -125,7 +125,7 @@ export const MyTable = <T extends {
                         base: "w-full sm:max-w-[30%]",
                         inputWrapper: "border-1",
                     }}
-                    placeholder="搜索对方号码..."
+                    placeholder="过滤对方号码..."
                     size="sm"
                     startContent={<SearchIcon className="text-default-300" />}
                     value={inputValue}

@@ -71,7 +71,7 @@ const fetchStaffids = async (staffid: string) => {
         const { D_CONTROLS } = controls
         const sectorIds = D_CONTROLS.split(",")
 
-        const staffids: Promise<string>[] = sectorIds.map(async (sectorId) => {
+        const staffids: Promise<string>[] = sectorIds.map(async (sectorId: string) => {
             const results = await prisma.spzc_crm_organization_users.findFirst({
                 where: {
                     U_SECTORID: sectorId

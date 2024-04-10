@@ -43,7 +43,7 @@ export default async function Page() {
                                 "success" :
                                 "warning"
                         }
-                        cardfoot={`通话个数${workLoad.totalNum} / ${totalTaskNum === Infinity ? '∞' : totalTaskNum} 个`}
+                        cardfoot={`通话个数 ${workLoad.totalNum} / ${totalTaskNum === Infinity ? '∞' : totalTaskNum} 个`}
                     />
                     <MyCard
                         value={Math.floor(workLoad.totalTime / 60)}

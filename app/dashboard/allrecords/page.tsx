@@ -21,7 +21,7 @@ const Page = async () => {
 
     return (
         <>
-            <div className="flex  pb-10 bg-red-200 h-full" >
+            <div  >
                 <TableWithDatePicker staffid={staffid} />
             </div>
         </>
