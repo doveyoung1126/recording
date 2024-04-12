@@ -162,7 +162,7 @@ export const MyTable = <T extends {
     }, [handleFilter, inputValue, staffArray, staffFilter])
     const bottomContent = React.useMemo(() => {
         return (
-            <div className="py-2 px-2 flex justify-center items-center bg-green-200">
+            <div className="py-2 px-2 flex justify-center items-center">
                 <Pagination
                     isCompact
                     showControls
