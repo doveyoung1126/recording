@@ -29,6 +29,7 @@ export const fetchCurrentUserRecords = async (staffid: string, date: string, dat
                 duration: true,
                 isanswer: true,
                 record_filename: true,
+                agent_staffid: true
             },
             orderBy: {
                 start_stamp: 'desc',
@@ -125,6 +126,7 @@ export const fetchUsersRecords = async (staffid: string, date: string, date2?: s
                 duration: true,
                 isanswer: true,
                 record_filename: true,
+                agent_staffid: true
             },
             orderBy: {
                 start_stamp: 'desc',

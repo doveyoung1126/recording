@@ -1,24 +1,39 @@
 'use client'
 import useSWR from 'swr'
-import { formatCurrentUserReocrds } from '@/app/lib/formatdata'
+import dayjs from 'dayjs'
+import { MyRecord } from '../lib/type'
 
-export const UserTasks = ({ staffid, date }: {
-    staffid: string,
-    date: string
-}) => {
+const fetcher = async (params: string) => {
+    try {
+        const res
+            = await fetch(`/recording/api/fetch-users-records?${params}`)
 
+        return await res.json() as MyRecord
 
-    const fetcher = async ([staffid, date]: [string, string]) => {
-        const { workLoad } = await formatCurrentUserReocrds(staffid, date)
-        const data = JSON.stringify(workLoad)
-        return data
+    } catch (error) {
+        throw error
     }
-
-    const { data, error, isLoading } = useSWR([staffid, date], (e) => fetcher(e))
-    console.log(data, 'data')
-    console.log(error, 'error')
-    console.log(isLoading, 'isLoading')
-
-    return <div>{data}</div>
 }
 
+
+export const UserTasks = ({ staffid, startDate, endDate }: {
+    staffid: string,
+    startDate: string,
+    endDate?: string
+}) => {
+
+    const { data, error, isLoading }
+        = useSWR(`staffid=${staffid}&startDate=${startDate}`, fetcher)
+
+    console.log(data)
+
+    return (
+        <>
+            hi
+            {isLoading ? 'isLoading' : data?.map((e) =>
+                <p key={e.uuid}> {e.uuid} </p>
+            )}
+
+        </>
+    )
+}

@@ -1,5 +1,6 @@
-import { UserTasks } from "@/app/components/user-tasks";
+import { UserTasks } from "@/app/components/user-tasks"
 import { getUser } from "../../api/logto/user/get-user"
+import dayjs from 'dayjs'
 
 const Page = async () => {
     const currentDate = new Date().toISOString().slice(0, 10);
@@ -19,7 +20,7 @@ const Page = async () => {
 
     return (
         <>
-            <UserTasks staffid={staffid} date='2024-04-11' />
+            <UserTasks staffid={staffid} startDate='2024-04-11' />
         </>
     )
 }

@@ -7,6 +7,7 @@ export type MyRecord = {
     isanswer: string | null;
     destination_number: string | null;
     outbound_cid: string | null;
+    agent_staffid: string | null
 }[]
 
 export type TableData = {
