@@ -199,6 +199,9 @@ export const MyTable = <T extends {
                     </div>
                 )
 
+            case ('local_number'):
+                return `${item.agent_name}(${cellValue})`
+
             default:
                 return cellValue
         }

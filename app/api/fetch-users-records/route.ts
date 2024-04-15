@@ -10,13 +10,12 @@ export async function GET(request: Request) {
     const endDate = searchParams.get('endDate')
     const user = await getUser()
 
-    if (user.userInfo?.custom_data?.staffid === staffid
-        && user.isAuthenticated) {
+    if (user.userInfo?.custom_data?.staffid === staffid) {
         const data
             = await fetchUsersRecords(staffid, startDate, endDate ? endDate : startDate)
 
         return NextResponse.json(data)
     } else {
-        return NextResponse.json({ error: 'Params Error Or Unauthenticated' })
+        return NextResponse.json({ error: 'Params Error Or Unauthenticated', status: 400 })
     }
 }

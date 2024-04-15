@@ -8,6 +8,7 @@ export type MyRecord = {
     destination_number: string | null;
     outbound_cid: string | null;
     agent_staffid: string | null
+    agent_name: string | null
 }[]
 
 export type TableData = {
@@ -17,3 +18,14 @@ export type TableData = {
     remote_number?: string,
     formattedDuration: string
 }[]
+
+export type TaskData = {
+    agent_staffid: string
+    agent_name: string
+    incomingDuration: number
+    outgoingDuration: number
+    totalDuration: number
+    incomingCount: number
+    outgoingCount: number
+    totalCount: number
+}
