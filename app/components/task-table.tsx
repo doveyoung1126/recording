@@ -5,17 +5,14 @@ import {
     TableBody,
     TableRow,
     TableCell,
-    Button,
-    Input,
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownItem,
-    Pagination,
-    Spinner
+    Spinner,
+    Tabs,
+    Tab
 } from "@nextui-org/react";
 import { TaskData } from "../lib/type";
 import React from "react";
+
+type SelectedRange = "weekly" | "today"
 
 export const TaskTable = ({ todayTaskData, weeklyTaskData, isLoading }: {
     todayTaskData: TaskData[],
@@ -43,6 +40,20 @@ export const TaskTable = ({ todayTaskData, weeklyTaskData, isLoading }: {
             key: 'counts',
             label: '总数量'
         }
+    ]
+
+    const allData = {
+        weekly: weeklyTaskData,
+        today: todayTaskData
+    }
+
+
+    const [selected, setSelected] = React.useState<SelectedRange>("today")
+    const tableData = allData[selected]
+
+    const tabs = [
+        { id: "today", label: "今日工作量" },
+        { id: "weekly", label: "本周工作量" },
     ]
 
     const cellRender = React.useCallback((item: { [x: string]: any; } & TaskData, columnKey: string | number) => {
@@ -98,33 +109,47 @@ export const TaskTable = ({ todayTaskData, weeklyTaskData, isLoading }: {
     }, [])
 
     return (
-        <Table aria-label="This is a table"
-            isStriped
-            // selectionMode='single'
-            color="primary"
-            topContentPlacement="outside"
-            bottomContentPlacement="outside"
-            isHeaderSticky
-        >
-            <TableHeader columns={columns}>
-                {(column) => (
-                    <TableColumn maxWidth={2} key={column.key}>{column.label}</TableColumn>
-                )}
-            </TableHeader>
-            <TableBody
-                isLoading={isLoading}
-                loadingContent={<Spinner label="正在加载..." />}
-                // emptyContent={isLoading ?? (isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！")}
-                emptyContent={isLoading ?? "去打个电话吧，完成今天的任务！"}
-                items={todayTaskData}>
 
+        <div>
+            <Tabs
+                items={tabs}
+                selectedKey={selected}
+                onSelectionChange={(key) => setSelected(key as SelectedRange)}
+            >
                 {(item) => (
-                    <TableRow key={item.agent_staffid}>
-                        {(columnKey) => <TableCell>{cellRender(item, columnKey)}</TableCell>}
-                    </TableRow>
+                    <Tab key={item.id} title={item.label}>
+                        <Table aria-label="This is a table"
+                            isStriped
+                            // selectionMode='single'
+                            color="primary"
+                            topContentPlacement="outside"
+                            bottomContentPlacement="outside"
+                            isHeaderSticky
+                        >
+                            <TableHeader columns={columns}>
+                                {(column) => (
+                                    <TableColumn maxWidth={2} key={column.key}>{column.label}</TableColumn>
+                                )}
+                            </TableHeader>
+                            <TableBody
+                                isLoading={isLoading}
+                                loadingContent={<Spinner label="正在统计..." />}
+                                // emptyContent={isLoading ?? (isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！")}
+                                emptyContent={isLoading ?? "去打个电话吧，完成今天的任务！"}
+                                items={tableData}>
+
+                                {(item) => (
+                                    <TableRow key={item.agent_staffid}>
+                                        {(columnKey) => <TableCell>{cellRender(item, columnKey)}</TableCell>}
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </Tab>
                 )}
-            </TableBody>
-        </Table>
+
+            </Tabs>
+        </div>
     )
 }
 

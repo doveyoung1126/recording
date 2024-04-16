@@ -7,7 +7,8 @@ export const NavLinks = () => {
     const pathname = usePathname()
     const links = [
         { name: 'MyRecords', href: '/dashboard', icon: '', text: '我的通话记录' },
-        { name: 'allRecords', href: '/dashboard/allrecords', icon: '', text: '所有通话记录' }
+        { name: 'allRecords', href: '/dashboard/allrecords', icon: '', text: '所有通话记录' },
+        { name: 'tasks', href: '/dashboard/user-tasks', icon: '', text: '工作量统计' }
     ];
 
     return (

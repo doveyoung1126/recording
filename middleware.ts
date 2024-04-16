@@ -16,5 +16,5 @@ export async function middleware() {
 }
 
 export const config = {
-    matcher: '/api/download/:filepath*'
+    matcher: ['/api/download/:filepath*', '/api/fetch-users-records']
 }
