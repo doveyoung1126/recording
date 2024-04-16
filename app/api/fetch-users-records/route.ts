@@ -1,21 +1,27 @@
 import { fetchUsersRecords } from "@/app/lib/data"
 import { NextResponse } from "next/server"
 import { getUser } from "../logto/user/get-user"
+import dayjs from 'dayjs'
+
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
-    const staffid = searchParams.get('staffid')
-    const currentDate = new Date().toISOString().slice(0, 10)
-    const startDate = searchParams.get('startDate') ?? currentDate
-    const endDate = searchParams.get('endDate')
+    // const staffid = searchParams.get('staffid')
     const user = await getUser()
+    const staffid = user.userInfo?.custom_data?.staffid
 
-    if (user.userInfo?.custom_data?.staffid === staffid) {
+    dayjs.locale('zh', { weekStart: 1 })
+    const startOfWeek = dayjs().startOf('week').format('YYYY-MM-DD')
+    const endOfWeek = dayjs().endOf('week').format('YYYY-MM-DD')
+
+    console.log(startOfWeek, endOfWeek)
+
+    if (staffid) {
         const data
-            = await fetchUsersRecords(staffid, startDate, endDate ? endDate : startDate)
+            = await fetchUsersRecords(staffid, startOfWeek, endOfWeek)
 
         return NextResponse.json(data)
     } else {
-        return NextResponse.json({ error: 'Params Error Or Unauthenticated', status: 400 })
+        return NextResponse.json({ error: 'Params Error Or Unauthenticated' }, { status: 400 })
     }
 }
