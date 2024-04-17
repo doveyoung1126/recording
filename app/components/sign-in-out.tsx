@@ -2,7 +2,13 @@
 
 import { useRouter } from "next/navigation"
 
-export const SignInOut = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
+export const SignInOut = ({
+    isAuthenticated,
+    username
+}: {
+    isAuthenticated: boolean
+    username?: string
+}) => {
 
     const router = useRouter()
     return (
@@ -19,7 +25,7 @@ export const SignInOut = ({ isAuthenticated }: { isAuthenticated: boolean }) => 
                     onClick={() =>
                         router.push('/api/logto/sign-out')
                     }>
-                    Sign Out
+                    {username ?? "Sign Out"}
                 </button>}
         </>
     )

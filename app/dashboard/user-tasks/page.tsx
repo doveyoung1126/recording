@@ -15,7 +15,7 @@ const Page = async () => {
                 {!user.isAuthenticated &&
                     <span>
                         也许
-                        <Link className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                        <Link className="inline-block bg-blue-200 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
                             href='/api/logto/sign-in'>
                             登录
                         </Link>
