@@ -4,6 +4,7 @@ import { MyCard } from "../components/cards"
 import { MyTable } from "../components/table"
 import { formatCurrentUserReocrds } from "../lib/formatdata"
 import { taskRequirements } from "../lib/constant";
+import Link from "next/link";
 
 export default async function Page() {
     const currentDate = new Date().toISOString().slice(0, 10);
@@ -12,16 +13,24 @@ export default async function Page() {
     console.log(user)
     const staffid = user.userInfo?.custom_data?.staffid
     const userGroups: string = user.userInfo?.custom_data?.groups ?? ''
-    const userRole: string = user.userInfo?.custom_data?.role ?? ''
     const userAssessed: boolean = (user.userInfo?.custom_data?.assessed !== false)
 
     if (!staffid) {
         return (
             <>
-                <h1>Are you sales?</h1>
-                <h1>It seems you do not have a phone number, or the Administrator has not set it up.</h1>
-                <h1>Please contact the Administrator if you ensure you should have been able to see something.</h1>
-                {/* <h1>{user.userInfo?.email}</h1> */}
+                <h1>你是营销中心同事吗？</h1>
+                <h1>看起来你没有分机号，或者管理员还没有设置。</h1>
+                <h1>如果你确定你可以使用这个系统，请联系管理员。</h1>
+                {!user.isAuthenticated &&
+                    <span>
+                        也许
+                        <Link className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                            href='/api/logto/sign-in'>
+                            登录
+                        </Link>
+                        可以解决这个问题
+                    </span>
+                }
             </>
         )
     }
@@ -67,7 +76,7 @@ export default async function Page() {
                     />
                 </div>
             }
-            <div className='flex  pb-5 bg-red-200 h-full'>
+            <div className='flex  pb-5  h-full'>
                 <MyTable data={tableData} />
             </div>
         </>

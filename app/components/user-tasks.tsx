@@ -3,13 +3,12 @@ import useSWR from 'swr'
 import dayjs from 'dayjs'
 import { MyRecord, TaskData } from '../lib/type'
 import React from 'react'
-import { MyTaskData } from '@/app/components/my-task-data'
 import { TaskTable } from './task-table'
 
-const fetcher = async (params: string) => {
+const fetcher = async (url: string) => {
     try {
         const res
-            = await fetch('/recording/api/fetch-users-records')
+            = await fetch(url)
         if (!res.ok) {
             throw new Error(`Error ${res.status}`)
         }
@@ -21,14 +20,10 @@ const fetcher = async (params: string) => {
     }
 }
 
-export const UserTasks = ({ staffid, startDate, endDate }: {
-    staffid: string,
-    startDate: string,
-    endDate?: string
-}) => {
+export const UserTasks = () => {
 
     const { data, error, isLoading }
-        = useSWR(`staffid=${staffid}&startDate=${startDate}`, fetcher)
+        = useSWR('/recording/api/fetch-users-records', fetcher)
 
     console.log(data)
 
