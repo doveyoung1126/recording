@@ -9,7 +9,6 @@ export const fetchPageData = async () => {
     } */
 
 
-    console.log(user)
     const staffid = user.userInfo?.custom_data?.staffid
 
     if (!staffid) {

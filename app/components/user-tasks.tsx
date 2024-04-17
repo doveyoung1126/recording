@@ -5,8 +5,14 @@ import { MyRecord, TaskData } from '../lib/type'
 import React from 'react'
 import { TaskTable } from './task-table'
 
-const fetcher = async (url: string) => {
+const fetcher = async ({ url, isAuthenticated }: {
+    url: string,
+    isAuthenticated: boolean
+}) => {
     try {
+        if (!isAuthenticated) {
+            return [] as MyRecord
+        }
         const res
             = await fetch(url)
         if (!res.ok) {
@@ -19,13 +25,10 @@ const fetcher = async (url: string) => {
         throw error
     }
 }
-
-export const UserTasks = () => {
+export const UserTasks = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
 
     const { data, error, isLoading }
-        = useSWR('/recording/api/fetch-users-records', fetcher)
-
-    console.log(data)
+        = useSWR({ url: '/recording/api/fetch-users-records', isAuthenticated }, fetcher)
 
     const calculateTask = (data: MyRecord) => {
         const userTasks = data.reduce((acc, curr) => {

@@ -2,7 +2,6 @@ import { NextResponse } from "next/server"
 import { getUser } from "./app/api/logto/user/get-user"
 
 export async function middleware() {
-    console.log('useful middleware')
     const { isAuthenticated } = await getUser()
     if (!isAuthenticated) {
         return Response.json(
@@ -10,7 +9,6 @@ export async function middleware() {
             { status: 401 }
         )
     } else {
-        console.log('sucess')
         return NextResponse.next()
     }
 }
