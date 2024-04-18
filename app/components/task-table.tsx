@@ -135,7 +135,7 @@ export const TaskTable = ({ todayTaskData, weeklyTaskData, isLoading }: {
                                 isLoading={isLoading}
                                 loadingContent={<Spinner label="正在统计..." />}
                                 // emptyContent={isLoading ?? (isSearchAble ? "没有找到记录..." : "去打个电话吧，完成今天的任务！")}
-                                emptyContent={isLoading ?? "去打个电话吧，完成今天的任务！"}
+                                emptyContent={!isLoading && "去打个电话吧，完成今天的任务！"}
                                 items={tableData}>
 
                                 {(item) => (

@@ -1,9 +1,12 @@
 'use client'
 import useSWR from 'swr'
 import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
 import { MyRecord, TaskData } from '../lib/type'
 import React from 'react'
 import { TaskTable } from './task-table'
+
+dayjs.extend(timezone)
 
 const fetcher = async ({ url, isAuthenticated }: {
     url: string,
@@ -31,9 +34,12 @@ export const UserTasks = ({ isAuthenticated }: { isAuthenticated: boolean }) => 
         = useSWR({ url: '/recording/api/fetch-users-records', isAuthenticated }, fetcher)
 
     const calculateTask = (data: MyRecord) => {
-        const userTasks = data.reduce((acc, curr) => {
+        const filteredData = data.filter((record) => (
+            record.direction !== "local" && Boolean(record.duration) && Boolean(record.direction)
+        ))
+        const userTasks = filteredData.reduce((acc, curr) => {
             const { agent_staffid, agent_name, direction, duration } = curr
-            if (!agent_staffid || direction === 'local') {
+            if (!agent_staffid) {
                 return acc
             }
 
@@ -87,7 +93,7 @@ export const UserTasks = ({ isAuthenticated }: { isAuthenticated: boolean }) => 
     const todayTaskData = React.useMemo(() => {
         if (data && data.length > 0) {
             const filteredTodayTask = data.filter((task) =>
-                dayjs(task.start_stamp).isSame(dayjs(), 'day')
+                dayjs(task.start_stamp).subtract(8, 'hours').isSame(dayjs(), 'day')
             )
             const todayTask = calculateTask(filteredTodayTask)
             return todayTask

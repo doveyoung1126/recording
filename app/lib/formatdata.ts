@@ -79,13 +79,9 @@ const formatData = async (records: MyRecord) => {
 
     })
     const compWorkLoad = () => {
-        const filteredRecordsDuration = records.filter((record) => {
-            return (
-                record.duration && record.duration > 1
-            )
-        })
-        const compTime = filteredRecordsDuration.reduce((acc, filteredRecord) => acc + (filteredRecord.duration ?? 0), 0)
-        const compNum = records.length
+
+        const compTime = filteredData.reduce((acc, filteredRecord) => acc + (filteredRecord.duration ?? 0), 0)
+        const compNum = filteredData.length
         const filteredRecordsAnswered = records.filter((record) => {
             return (
                 record.isanswer === '已接听'
