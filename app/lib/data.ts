@@ -99,8 +99,6 @@ const fetchStaffids = async (staffid: string) => {
 
 export const fetchUsersRecords = async (staffid: string, date: string, date2?: string) => {
     noStore()
-    //custom tmp param, delete later 
-    const agent_staffid = staffid
     const start_stamp = date
     const start_stamp_end = date2 || date
 
